@@ -1,5 +1,5 @@
 import gsap from 'gsap'
-import { listen } from 'quicklink'
+// import { listen } from 'quicklink'
 import { on, size } from 'martha'
 import { fonts } from './lib/fonts'
 import app from './app'
@@ -9,9 +9,9 @@ import app from './app'
  * instant next-page navigation via quicklink (production-only)
  * https://getquick.link/
  */
-if (process.env.NODE_ENV === 'production') {
-  listen()
-}
+// if (process.env.NODE_ENV === 'production') {
+//   listen()
+// }
 
 /**
  * Waits for all fonts to load before initializing

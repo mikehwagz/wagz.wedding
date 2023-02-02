@@ -34,26 +34,12 @@
     "tailwindcss": "^3.1.8"
   },
   "dependencies": {
-    "@mailchimp/mailchimp_transactional": "^1.0.50",
-    "@mux/mux-video": "^0.9.2",
-    "@studio-freight/lenis": "^0.2.19",
-    "@xstate/fsm": "^2.0.0",
     "choozy": "^1.0.0",
-    "dcx": "^1.1.0",
-    "embla-carousel": "^7.0.4",
-    "embla-carousel-class-names": "^7.0.4",
-    "embla-carousel-wheel-gestures": "^3.0.0",
     "focus-trap": "^7.0.0",
     "fontfaceobserver": "^2.3.0",
-    "gsap": "file:gsap-bonus.tgz",
-    "js-cookie": "^3.0.1",
+    "gsap": "^3.11.4",
     "martha": "^4.1.0",
-    "node-fetch": "2.6.1",
     "picoapp": "^3.6.2",
-    "quicklink": "^2.3.0",
-    "sharable": "^1.0.1",
-    "smitter": "^1.1.1",
-    "sqzbx": "^0.0.6",
-    "vlitejs": "^4.2.0"
+    "quicklink": "^2.3.0"
   }
 }
