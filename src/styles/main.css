@@ -1,0 +1,59 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+  @font-face {
+    font-family: 'Candy Darling';
+    src: url('/assets/fonts/CandyDarling-Regular-Web.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Gooper';
+    src: url('/assets/fonts/Gooper7-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Gooper';
+    src: url('/assets/fonts/Gooper7-LightItalic.woff2') format('woff2');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+  }
+
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+
+  html {
+    font-size: 62.5%;
+  }
+
+  html,
+  body {
+    overscroll-behavior-y: none;
+    @apply w-full h-full bg-cream;
+  }
+
+  body {
+    @apply font-gooper text-20 m:text-25 tracking-n1 font-light leading-150 min-h-screen transition-opacity ease-out-quint duration-700;
+  }
+
+  ::selection {
+    @apply bg-black text-white;
+  }
+}
+
+@layer components {
+}
+
+@layer utilities {
+}

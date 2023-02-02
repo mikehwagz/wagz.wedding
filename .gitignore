@@ -1,0 +1,9 @@
+.env
+.DS_Store
+.parcel-cache
+.netlify
+node_modules
+build
+dist
+netlify/functions/preview/**
+!netlify/functions/preview/index.js
