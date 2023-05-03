@@ -1,43 +1,57 @@
 module.exports = {
   presets: [require('@selfaware/tailwind-base')],
   content: [
-    './src/**/*.njk',
-    './src/scripts/**/*.js',
-    './.eleventy.js',
-    './lib/*.js',
+    './components/*.jsx',
+    './pages/*.{js,jsx}',
+    './lib/*.{js,jsx}',
+    './client/**/*.{js,jsx}',
   ],
   darkMode: 'class',
   theme: {
-    screens: {
-      xs: '40rem',
-      s: '60rem',
-      m: '80rem',
-      l: '100rem',
-      xl: '120rem',
-      '2xl': '140rem',
-      '3xl': '160rem',
-      ...new Array(27)
-        .fill()
-        .map((_, i) => i * 5 + 30)
-        .reduce((acc, val) => {
-          acc[val * 10] = `${val}rem`
-          return acc
-        }, {}),
-    },
     extend: {
+      screens: {
+        xs: '375px',
+      },
       colors: {
-        black: '#000000',
-        blue: '#C9DBFF',
-        cream: '#F7F2E9',
+        black: '#111',
+        gray: '#adadad',
+        white: '#fff',
       },
       fontFamily: {
-        gooper: ['Gooper', 'serif'],
-        candy: ['Candy Darling', 'sans-serif'],
+        sans: ['Neue Montreal', 'Arial', 'Helvetica', 'sans-serif'],
       },
       letterSpacing: {
-        n1: '-0.01em',
-        0: '0em',
+        1: '0.01em',
+        2: '0.02em',
+      },
+      borderWidth: {
+        1: '1px',
+      },
+      gridTemplateColumns: {
+        14: 'repeat(14, minmax(0, 1fr))',
+        16: 'repeat(16, minmax(0, 1fr))',
+      },
+      gridColumn: {
+        'span-13': 'span 13 / span 13',
+        'span-14': 'span 14 / span 14',
+        'span-15': 'span 15 / span 15',
+        'span-16': 'span 16 / span 16',
+      },
+      gridColumnStart: {
+        13: '13',
+        14: '14',
+        15: '15',
+        16: '16',
+        17: '17',
+      },
+      gridColumnEnd: {
+        13: '13',
+        14: '14',
+        15: '15',
+        16: '16',
+        17: '17',
       },
     },
   },
+  plugins: [],
 }
