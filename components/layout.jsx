@@ -59,7 +59,10 @@ export function Layout({ children }) {
         <div id="root">
           <Header />
           <main class="fixed inset-0 [clip-path:inset(calc(7.2rem-1px)_calc(2rem-1px)_calc(2rem-1px)_calc(2rem-1px)_round_4rem)] bg-black">
-            <div class="w-full h-full [clip-path:inset(7.2rem_2rem_2rem_2rem_round_calc(4rem-1px))] bg-blue-primary pt-72 px-20 pb-20 overflow-y-auto">
+            <div
+              id="scroll-wrapper"
+              class="w-full h-full [clip-path:inset(7.2rem_2rem_2rem_2rem_round_calc(4rem-1px))] bg-blue-primary px-20 pb-20 overflow-y-auto"
+            >
               {children}
             </div>
           </main>

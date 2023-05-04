@@ -3,8 +3,6 @@ import { gsap } from 'gsap'
 import { SplitText } from 'gsap/SplitText'
 import { hover } from '../lib/hover'
 
-gsap.registerPlugin(SplitText)
-
 export default component((node, ctx) => {
   let animating = false
 

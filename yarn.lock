@@ -181,10 +181,15 @@
     estree-walker "^2.0.1"
     picomatch "^2.2.2"
 
-"@selfaware/tailwind-base@^0.0.6":
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/@selfaware/tailwind-base/-/tailwind-base-0.0.6.tgz#5e9ae6b5fa25bdf1bd0afa386d97468ca3f66133"
-  integrity sha512-ayYQruy9FQIeYoC2Sepsmzq99mWkxnMYadrOWfYr2TCQxqeNdCCEaHJG1+R2KSkdPc7AnM4YiSGKQkKVagEJZQ==
+"@selfaware/tailwind-base@^0.0.7":
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/@selfaware/tailwind-base/-/tailwind-base-0.0.7.tgz#d4348bc0c15ff9368dda8e2d918622c167034211"
+  integrity sha512-0vylqIiWMLl2HyMjVqtFBmBU1BDf/moy90z1ivWW2/vXIKDvUDBlVjmx9V/p1/mlZBty17IGIZ8zHedFb5XfhA==
+
+"@studio-freight/lenis@^1.0.11":
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/@studio-freight/lenis/-/lenis-1.0.11.tgz#e92985e604f18a827df64bbb64bf43260a727281"
+  integrity sha512-N4VpYVXQS0BhbExl9CADyPp3vmRb2p4JME+exdguT/OrYTprkUv13BQODtryR/QebWS36n/NKgic5lVBMMa4+A==
 
 "@trysound/sax@0.2.0":
   version "0.2.0"
@@ -1444,6 +1449,11 @@ load-json-file@^4.0.0:
     pify "^3.0.0"
     strip-bom "^3.0.0"
 
+lodash.escape@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/lodash.escape/-/lodash.escape-4.0.1.tgz#c9044690c21e04294beaa517712fded1fa88de98"
+  integrity sha512-nXEOnb/jK9g0DYMr1/Xvq6l5xMD7GDG55+GSYIYmS0G4tBk/hURD4JR9WCavs04t33WmJx9kCyp9vJ+mr4BOUw==
+
 lodash.memoize@^4.1.2:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/lodash.memoize/-/lodash.memoize-4.1.2.tgz#bcc6c49a42a2840ed997f323eada5ecd182e0bfe"
@@ -1466,7 +1476,7 @@ magic-string@^0.25.7:
   dependencies:
     sourcemap-codec "^1.4.8"
 
-martha@^4.1.0:
+martha@^4.0.4, martha@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/martha/-/martha-4.1.0.tgz#11596e52ab2394176d83b5b4d57419d3421c9a47"
   integrity sha512-rWGYzS4+cot6VLLLwTXqxLxUb/9qKutjbPqBBq+CT0FG+fmXm6LxFj8csRRpTKRWWlQHJlTUY1TysP0xOF/s1w==
@@ -2557,6 +2567,11 @@ sirv@^1.0.7:
     mrmime "^1.0.0"
     totalist "^1.0.0"
 
+smitter@^1.0.2:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/smitter/-/smitter-1.1.1.tgz#cade535ccd3b2cc8ad274a9fe9b02937f50a316f"
+  integrity sha512-6AwxCy1VfHVBpCljZb/QCGUcRmZKL6s3o5NRjJfJKAQxtiC8GCJUpy1OFs3RcJinykoj/p7jIkPrM3Z3bYmgZg==
+
 smob@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/smob/-/smob-0.0.6.tgz#09b268fea916158a2781c152044c6155adbb8aa1"
@@ -2615,6 +2630,14 @@ split-on-first@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/split-on-first/-/split-on-first-1.1.0.tgz#f610afeee3b12bce1d0c30425e76398b78249a5f"
   integrity sha512-43ZssAJaMusuKWL8sKUBQXHWOpq8d6CfN/u1p4gUzfJkM05C8rxTmYrkIPTXapZpORA6LkkzcUulJ8FqA7Uudw==
+
+sqzbx@^0.0.6:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/sqzbx/-/sqzbx-0.0.6.tgz#f2bcecddd56eaf811d4532cc9a1e848b09f76712"
+  integrity sha512-nNqqa5wySyrusUxzeThU2DIgB+SOQdkjChIZPiVkF8E8MlzruEHGtnG+hDrb/n9a/5dIBsIq/Ao6tEYnK3VLJQ==
+  dependencies:
+    martha "^4.0.4"
+    smitter "^1.0.2"
 
 stable@^0.1.8:
   version "0.1.8"

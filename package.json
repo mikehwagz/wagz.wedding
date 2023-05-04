@@ -13,16 +13,19 @@
     "dev": "npm-run-all --serial clean build:rollup-dev --parallel dev:*"
   },
   "dependencies": {
-    "@selfaware/tailwind-base": "^0.0.6",
+    "@selfaware/tailwind-base": "^0.0.7",
+    "@studio-freight/lenis": "^1.0.11",
     "choozy": "^1.0.0",
     "focus-trap": "^7.4.0",
     "focus-visible": "^5.2.0",
     "fontfaceobserver": "^2.3.0",
     "gsap": "file:gsap-bonus.tgz",
     "hyposcript": "^1.2.0",
+    "lodash.escape": "^4.0.1",
     "martha": "^4.1.0",
     "picoapp": "^3.6.2",
-    "quicklink": "^2.3.0"
+    "quicklink": "^2.3.0",
+    "sqzbx": "^0.0.6"
   },
   "devDependencies": {
     "@presta/adapter-netlify": "^0.5.1",
