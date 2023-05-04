@@ -1,5 +1,6 @@
 import { h } from 'hyposcript'
 import manifest from '../manifest.json'
+import { Header } from './header'
 
 export function Layout({ children }) {
   return `<!DOCTYPE html>${(
@@ -9,9 +10,9 @@ export function Layout({ children }) {
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <link rel="preload" href="/fonts/nmb.woff2" as="font" type="font/woff2" crossorigin />
-        <link rel="preload" href="/fonts/nmm.woff2" as="font" type="font/woff2" crossorigin />
-        <link rel="preload" href="/fonts/nmr.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="preload" href="/fonts/cdr.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="preload" href="/fonts/gl.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="preload" href="/fonts/gli.woff2" as="font" type="font/woff2" crossorigin />
 
         <link rel="preload" href={`/${manifest['main.css']}`} as="style" />
         <link rel="preload" href={`/${manifest['main.js']}`} as="script" />
@@ -46,20 +47,23 @@ export function Layout({ children }) {
           </>
         ) : null} */}
 
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="manifest" href="/site.webmanifest" />
-        <meta name="msapplication-TileColor" content="#111111" />
-        <meta name="theme-color" content="#111111"></meta>
+        <link
+          rel="icon"
+          href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🖤</text></svg>"
+        />
 
         <link rel="stylesheet" href={`/${manifest['main.css']}`} />
         <script src={`/${manifest['main.js']}`} defer></script>
       </head>
       <body>
-        <header>Header</header>
-        <main>{children}</main>
-        <footer>Footer</footer>
+        <div id="root">
+          <Header />
+          <main class="fixed inset-0 [clip-path:inset(calc(7.2rem-1px)_calc(2rem-1px)_calc(2rem-1px)_calc(2rem-1px)_round_4rem)] bg-black">
+            <div class="w-full h-full [clip-path:inset(7.2rem_2rem_2rem_2rem_round_calc(4rem-1px))] bg-blue-primary pt-72 px-20 pb-20 overflow-y-auto">
+              {children}
+            </div>
+          </main>
+        </div>
       </body>
     </html>
   )}`

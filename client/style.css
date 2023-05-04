@@ -4,26 +4,26 @@
 
 @layer base {
   @font-face {
-    font-family: 'Neue Montreal';
-    src: url('/fonts/nmr.woff2') format('woff2'), url('/fonts/nmr.woff') format('woff');
-    font-weight: normal;
+    font-family: 'Candy Darling';
+    src: url('/fonts/cdr.woff2') format('woff2');
+    font-weight: 400;
     font-style: normal;
     font-display: swap;
   }
 
   @font-face {
-    font-family: 'Neue Montreal';
-    src: url('/fonts/nmm.woff2') format('woff2'), url('/fonts/nmm.woff') format('woff');
-    font-weight: 500;
+    font-family: 'Gooper';
+    src: url('/fonts/gl.woff2') format('woff2');
+    font-weight: 300;
     font-style: normal;
     font-display: swap;
   }
 
   @font-face {
-    font-family: 'Neue Montreal';
-    src: url('/fonts/nmb.woff2') format('woff2'), url('/fonts/nmb.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
+    font-family: 'Gooper';
+    src: url('/fonts/gli.woff2') format('woff2');
+    font-weight: 300;
+    font-style: italic;
     font-display: swap;
   }
 
@@ -34,7 +34,7 @@
   }
 
   html {
-    @apply text-[10px] text-white bg-black;
+    @apply text-[calc(10/1536*100vw)] bg-tan text-black;
 
     --header-height: 6.2rem;
     --footer-height: 4rem;
@@ -45,16 +45,16 @@
   }
 
   body {
-    @apply text-20 leading-140 font-sans text-white bg-black overflow-x-hidden;
+    @apply text-20 leading-150 -tracking-1 font-gooper bg-tan overflow-hidden;
   }
 
   a,
   button {
-    @apply outline-none;
+    @apply outline-black;
   }
 
   ::selection {
-    @apply bg-white text-black;
+    @apply bg-black text-tan;
   }
 
   [a-page] {
@@ -63,32 +63,20 @@
 }
 
 @layer components {
-  .rich-text {
-    p + p,
-    li + li {
-      @apply mt-25 m:mt-32 l:mt-47 first:mt-0;
-    }
-  }
+  .notched {
+    --notch-size: 5.7rem;
 
-  .rich-text a,
-  a.hyperlink {
-    word-wrap: break-word;
-
-    &:hover {
-      opacity: 0.65;
-    }
-  }
-
-  [data-module] {
-    @apply first:mt-[calc(var(--header-height)+clamp(50px,calc(100/1536*100vw),100px))] mb-[clamp(50px,calc(100/1536*100vw),100px)];
-  }
-
-  [data-module='videoPlayer'] {
-    @apply !mt-[var(--header-height)];
-
-    @screen l {
-      @apply mt-0;
-    }
+    clip-path: polygon(
+      0% var(--notch-size),
+      var(--notch-size) 0%,
+      calc(100% - var(--notch-size)) 0%,
+      100% var(--notch-size),
+      100% calc(100% - var(--notch-size)),
+      calc(100% - var(--notch-size)) 100%,
+      calc(100% - var(--notch-size)) 100%,
+      var(--notch-size) 100%,
+      0% calc(100% - var(--notch-size))
+    );
   }
 }
 
@@ -107,41 +95,4 @@
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
   }
-
-  .focusable {
-    @apply focus-visible:outline focus-visible:outline-white focus-visible:outline-1;
-  }
-
-  .g {
-    @apply grid grid-cols-16 gap-x-10 m:gap-x-30 px-10 m:px-30;
-  }
-
-  .gp {
-    @apply px-10 m:px-30;
-  }
-
-  .gg {
-    @apply gap-x-10 m:gap-x-30;
-  }
-
-  .gs {
-    @apply gap-x-10 m:gap-x-30 px-10 m:px-30;
-  }
-}
-
-.v-vlite {
-  --vlite-colorPrimary: theme('colors.white');
-  --vlite-colorSecondary: theme('colors.black');
-  --vlite-progressBarBackground: rgba(255, 255, 255, 0.4);
-  --vlite-controlsOpacity: 1;
-
-  @apply w-full h-full;
-
-  video {
-    @apply w-full h-full object-contain;
-  }
-}
-
-.v-video .v-controlBar .v-progressBar {
-  @apply static w-full transform-none mx-10 rounded-[0];
 }

@@ -1,34 +1,24 @@
 import { component } from 'picoapp'
-import choozy from 'choozy'
-import { noop, on, remove } from 'martha'
+import { attr, once, remove } from 'martha'
+import { io } from '../lib/io'
 
-export default component((node, ctx) => {
-  let { lqip, img } = choozy(node)
-  let offEnd = noop
-
-  let offLoad = on(img, 'load', () => {
-    offLoad()
-    offLoad = noop
-
-    if (lqip) {
-      offEnd = on(img, 'transitionend', () => {
-        offEnd()
-        offEnd = noop
-
-        lqip.remove()
+export default component((img, ctx) => {
+  io(img, {
+    once: true,
+    enter() {
+      once(img, 'load', () => {
+        requestAnimationFrame(() => {
+          remove(img, 'opacity-0')
+        })
       })
-    }
 
-    requestAnimationFrame(() => {
-      remove(img, 'opacity-0')
-    })
+      if (attr(img, 'data-srcset')) {
+        attr(img, 'srcset', img.dataset.src)
+        attr(img, 'data-srcset', null)
+      } else {
+        attr(img, 'src', img.dataset.src)
+        attr(img, 'data-src', null)
+      }
+    },
   })
-
-  img.setAttribute('srcset', img.dataset.srcset)
-  img.removeAttribute('data-srcset')
-
-  return () => {
-    offEnd()
-    offLoad()
-  }
 })

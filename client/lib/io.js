@@ -1,9 +1,6 @@
 import { noop } from 'martha'
 
-export default function io(
-  el,
-  { enter = noop, exit = noop, once = false, ...rest },
-) {
+export function io(el, { enter = noop, exit = noop, once = false, ...rest }) {
   let observer = new IntersectionObserver(
     (entries, observer) => {
       let entry = entries[0]

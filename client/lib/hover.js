@@ -1,18 +1,18 @@
 import { has, on } from 'martha'
 
-export default function hover(el, { enter, leave, focus = false }) {
+export function hover(el, { enter, leave, focus = false }) {
   let hovering = false
 
   let handleEnter = e => {
     if (hovering) return
     hovering = true
-    enter(e)
+    enter?.(e)
   }
 
   let handleLeave = e => {
     if (!hovering) return
     hovering = false
-    leave(e)
+    leave?.(e)
   }
 
   let events = []

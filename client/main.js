@@ -1,6 +1,5 @@
 import './style.css'
 import 'focus-visible'
-import { listen } from 'quicklink'
 import { add, on, remove, size } from 'martha'
 import gsap from 'gsap'
 import app from './app'
@@ -9,10 +8,7 @@ import fonts from './lib/fonts'
 main()
 
 async function main() {
-  if (process.env.NODE_ENV === 'production') listen()
-
   on(window, 'resize', resize)
-  on(document, 'mousemove', mousemove)
 
   app.on('lock', () => add(document.body, 'overflow-hidden'))
   app.on('unlock', () => remove(document.body, 'overflow-hidden'))
@@ -20,9 +16,9 @@ async function main() {
   gsap.ticker.add(tick)
 
   await fonts([
-    { family: 'Neue Montreal', options: { weight: 'normal' } },
-    { family: 'Neue Montreal', options: { weight: 500 } },
-    { family: 'Neue Montreal', options: { weight: 'bold' } },
+    { family: 'Gooper', options: { weight: 300 } },
+    { family: 'Gooper', options: { weight: 300, style: 'italic' } },
+    { family: 'Candy Darling', options: { weight: 400 } },
   ])
 
   app.mount()
@@ -34,8 +30,4 @@ function resize() {
 
 function tick() {
   app.emit('tick')
-}
-
-function mousemove({ x, y }) {
-  app.emit('mousemove', { mx: x, my: y })
 }
