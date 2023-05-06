@@ -147,7 +147,7 @@ export async function handler() {
       <section class="mb-150">
         <img src="/images/divider.png" alt="" class="max-w-[370px] mx-auto" />
       </section>
-      <section class="mb-150">
+      <section class="mb-285">
         <h2 class="text-50 text-center leading-100 font-candy mb-35">Your Stay in Philadelphia</h2>
         <p class="text-25 text-center max-w-[45rem] mx-auto mb-100">
           Make a weekend out of it! Here’s a list of places nearby, as well as some of our favorite
@@ -223,7 +223,7 @@ export async function handler() {
           </div>
         </div>
       </section>
-      <section class="mb-150">
+      <section class="mb-215">
         <h2 class="text-50 text-center leading-100 font-candy mb-40">Frequently Asked Questions</h2>
         <div class="accordion" data-component="accordion">
           <button data-sqzbx-button>
@@ -274,6 +274,34 @@ export async function handler() {
           </div>
         </div>
       </section>
+      <section class="text-center mb-95">
+        <h2 class="text-50 text-center leading-100 font-candy mb-35">Our Registry</h2>
+        <p class="text-25 text-center max-w-[45rem] mx-auto mb-50">
+          You know what they say—your presence is a gift! However, if you want to give us a present,
+          we’re registered at Zola.
+        </p>
+        <a
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-component="link"
+          class="inline-block px-35 py-14 leading-100 bg-tan border-1 rounded-full hover:bg-black hover:text-tan transition-colors duration-300 ease-in-out"
+        >
+          Give a Gift
+        </a>
+      </section>
+      <section class="mb-235">
+        <img src="/images/divider.png" alt="" class="max-w-[370px] mx-auto" />
+      </section>
+      <section class="px-50 mb-285">
+        <div class="bg-tan max-w-[945px] mx-auto rounded-7 [box-shadow:_0.7rem_0.7rem_0.9rem_theme('colors.blue-secondary')] px-50 py-60">
+          <h2 class="text-50 text-center leading-100 font-candy mb-35">RSVP</h2>
+        </div>
+      </section>
+      <footer class="text-center">
+        <p class="font-candy text-196 leading-100">Jenny & Mike</p>
+        <p class="italic">Website by the Bride & Groom ♥</p>
+      </footer>
     </Layout>
   )
 }
