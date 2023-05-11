@@ -53,6 +53,7 @@ export function Layout({ children }) {
         />
 
         <link rel="stylesheet" href={`/${manifest['main.css']}`} />
+        <script src="https://unpkg.com/@sanity/client"></script>
         <script src={`/${manifest['main.js']}`} defer></script>
       </head>
       <body>

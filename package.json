@@ -13,8 +13,11 @@
     "dev": "npm-run-all --serial clean build:rollup-dev --parallel dev:*"
   },
   "dependencies": {
+    "@algolia/autocomplete-js": "^1.9.2",
+    "@sanity/client": "^6.0.1",
     "@selfaware/tailwind-base": "^0.0.7",
     "@studio-freight/lenis": "^1.0.11",
+    "algoliasearch": "^4.17.0",
     "choozy": "^1.0.0",
     "focus-trap": "^7.4.0",
     "focus-visible": "^5.2.0",
