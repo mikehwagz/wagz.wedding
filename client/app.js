@@ -7,6 +7,7 @@ import link from './components/link'
 import marquee from './components/marquee'
 import parallax from './components/parallax'
 import accordion from './components/accordion'
+import schedule from './components/schedule'
 import form from './components/form.jsx'
 
 const components = {
@@ -17,6 +18,7 @@ const components = {
   marquee,
   parallax,
   accordion,
+  schedule,
 }
 
 const state = {

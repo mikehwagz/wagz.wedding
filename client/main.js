@@ -2,7 +2,7 @@ import './style.css'
 import 'focus-visible'
 import { add, on, remove, size } from 'martha'
 import gsap from 'gsap'
-import { SplitText, ScrollTrigger } from 'gsap/all'
+import { SplitText, ScrollTrigger, DrawSVGPlugin } from 'gsap/all'
 import app from './app'
 import fonts from './lib/fonts'
 import Lenis from '@studio-freight/lenis'
@@ -20,7 +20,7 @@ if (process.env.NODE_ENV === 'production') {
   })
 }
 
-gsap.registerPlugin(SplitText, ScrollTrigger)
+gsap.registerPlugin(SplitText, ScrollTrigger, DrawSVGPlugin)
 
 main()
 
