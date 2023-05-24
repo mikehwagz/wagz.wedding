@@ -128,7 +128,7 @@
       top: 50%;
       margin-top: -1px;
       background-color: black;
-      transition: transform 300ms theme('transitionTimingFunction.in-out-cubic');
+      transition: transform 500ms theme('transitionTimingFunction.in-out-cubic');
       height: 2px;
       width: 5.7rem;
       right: 3rem;
@@ -149,7 +149,7 @@
     [data-sqzbx-panel] {
       margin: 0;
       overflow: hidden;
-      transition: all 300ms theme('transitionTimingFunction.in-out-cubic');
+      transition: all 500ms theme('transitionTimingFunction.in-out-cubic');
       max-height: 0;
       transform: none;
 

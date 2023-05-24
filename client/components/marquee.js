@@ -1,9 +1,10 @@
 import { component } from 'picoapp'
 import choozy from 'choozy'
 import gsap from 'gsap'
-import { noop, rect } from 'martha'
+import { noop, rect, qsa, each } from 'martha'
 import { hover } from '../lib/hover'
 import { io } from '../lib/io'
+import app from '../app'
 
 export default component((node, ctx) => {
   let { inner, el } = choozy(node)
@@ -42,6 +43,11 @@ export default component((node, ctx) => {
       for (let i = 0; i < reps; i++) {
         let clone = el.cloneNode(true)
         clone.setAttribute('aria-hidden', 'true')
+
+        each(qsa('img', clone), el => {
+          el.setAttribute('data-component', 'img')
+        })
+
         inner.append(clone)
       }
     }
@@ -51,7 +57,7 @@ export default component((node, ctx) => {
     prevReps = reps
 
     tl && tl.kill()
-    tl = gsap.timeline({ repeat: -1, paused: true }).fromTo(
+    tl = gsap.timeline({ repeat: -1 }).fromTo(
       inner,
       { x: isReversed ? -x : 0 },
       {
@@ -60,6 +66,8 @@ export default component((node, ctx) => {
         ease: 'none',
       },
     )
+
+    app.mount()
   })
 
   return () => {

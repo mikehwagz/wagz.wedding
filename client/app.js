@@ -13,12 +13,12 @@ import form from './components/form.jsx'
 const components = {
   'grid-overlay': gridOverlay,
   form,
-  img,
   link,
   marquee,
   parallax,
   accordion,
   schedule,
+  img,
 }
 
 const state = {

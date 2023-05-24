@@ -2,6 +2,7 @@ import { h } from 'hyposcript'
 import { Layout } from '../components/layout'
 import classNames from 'classnames'
 import escape from 'lodash.escape'
+import gsap from 'gsap'
 
 export function getStaticPaths() {
   return ['/']
@@ -67,17 +68,28 @@ export async function handler() {
                     const isOdd = i % 2
                     return (
                       <div
-                        class={classNames('bg-tan px-20 pt-20 rounded-7', {
-                          'w-440 rotate-[10deg]': isOdd,
-                          'w-540 rotate-[-10deg]': !isOdd,
-                        })}
+                        class={classNames(
+                          'bg-tan px-20 pt-20 rounded-7',
+                          gsap.utils.wrap(['w-540', 'w-440', 'w-440'], i),
+                          {
+                            'rotate-[10deg]': isOdd,
+                            'rotate-[-10deg]': !isOdd,
+                          },
+                        )}
                       >
                         <div
-                          class={classNames('bg-black rounded-40', {
-                            'pt-[125%]': isOdd,
-                            'pt-[80%]': !isOdd,
-                          })}
-                        ></div>
+                          class={classNames(
+                            'relative bg-black rounded-40 overflow-hidden',
+                            gsap.utils.wrap(['pt-[80%]', 'pt-[125%]', 'pt-[125%]'], i),
+                          )}
+                        >
+                          <img
+                            class="absolute w-full h-full inset-0 object-cover"
+                            data-component="img"
+                            data-src={`/images/${year}.png`}
+                            alt={`Jenny and Mike in ${year}`}
+                          />
+                        </div>
                         <h3 class="font-candy text-38 text-center leading-100 pt-30">{year}</h3>
                       </div>
                     )
