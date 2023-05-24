@@ -27,7 +27,9 @@ export default {
     commonjs(),
     esbuild({
       minify: false,
-      jsxFactory: 'h',
+      jsx: 'transform',
+      jsxFactory: 'React.createElement',
+      jsxFragment: 'React.Fragment',
     }),
     prod && terser({ format: { comments: false } }),
     styles({ mode: 'extract', url: false }),

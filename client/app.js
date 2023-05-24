@@ -7,11 +7,11 @@ import link from './components/link'
 import marquee from './components/marquee'
 import parallax from './components/parallax'
 import accordion from './components/accordion'
-import nameInput from './components/name-input'
+import form from './components/form.jsx'
 
 const components = {
-  'name-input': nameInput,
   'grid-overlay': gridOverlay,
+  form,
   img,
   link,
   marquee,

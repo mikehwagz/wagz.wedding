@@ -294,19 +294,9 @@ export async function handler() {
         <img src="/images/divider.png" alt="" class="max-w-[370px] mx-auto" />
       </section>
       <section class="px-50 mb-285">
-        <div class="bg-tan max-w-[945px] mx-auto rounded-7 [box-shadow:_0.7rem_0.7rem_0.9rem_theme('colors.blue-secondary')] px-50 py-60 h-[685px] overflow-hidden flex flex-col">
-          <h2 class="text-50 text-center leading-100 font-candy">RSVP</h2>
-          <div class="flex-grow flex justify-center items-center">
-            <div
-              id="quick-search"
-              class="relative w-full max-w-[452px] mb-30"
-              data-component="name-input"
-            >
-              <h3 class="text-16 -tracking-1">Your Name:</h3>
-              <div class="selection:bg-white selection:text-black js-container"></div>
-              <div class="absolute top-full inset-x-0 selection:bg-white selection:text-black js-panelContainer"></div>
-            </div>
-          </div>
+        <div class="bg-tan max-w-[94.5rem] mx-auto rounded-7 [box-shadow:_0.7rem_0.7rem_0.9rem_theme('colors.blue-secondary')] px-50 py-60 h-[68.5rem] overflow-hidden flex flex-col">
+          <h2 class="text-50 text-center leading-100 font-candy mb-35">RSVP</h2>
+          <div class="flex-grow" data-component="form"></div>
         </div>
       </section>
       <footer class="text-center">

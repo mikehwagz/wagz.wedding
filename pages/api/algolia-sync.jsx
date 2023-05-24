@@ -1,5 +1,6 @@
 import algoliasearch from 'algoliasearch'
 import { createClient } from '@sanity/client'
+
 export const route = '/api/algolia-sync'
 
 export async function handler() {
