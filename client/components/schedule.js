@@ -6,6 +6,8 @@ import { each } from 'martha'
 export default component((node, ctx) => {
   const { paths } = choozy(node)
 
+  gsap.set(paths, { drawSVG: '0%' })
+
   ctx.on('initScroll', ({ scrollWrapper }) => {
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -17,8 +19,6 @@ export default component((node, ctx) => {
         invalidateOnRefresh: true,
       },
     })
-
-    tl.set(paths, { drawSVG: '0%' })
 
     each(paths, path => {
       tl.to(path, {
