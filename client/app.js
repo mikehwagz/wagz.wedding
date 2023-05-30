@@ -9,8 +9,10 @@ import parallax from './components/parallax'
 import accordion from './components/accordion'
 import schedule from './components/schedule'
 import form from './components/form.jsx'
+import anchorNav from './components/anchor-nav'
 
 const components = {
+  'anchor-nav': anchorNav,
   'grid-overlay': gridOverlay,
   form,
   link,

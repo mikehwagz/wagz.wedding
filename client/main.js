@@ -38,11 +38,13 @@ async function main() {
     { family: 'Candy Darling', options: { weight: 400 } },
   ])
 
-  app.lenis = new Lenis({ lerp: 0.115, wrapper: app.getState().scrollWrapper })
+  app.lenis = new Lenis({
+    lerp: 0.115,
+    wrapper: app.getState().scrollWrapper,
+  })
 
   app.mount()
   resize()
-
   app.emit('initScroll')
 }
 

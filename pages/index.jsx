@@ -44,7 +44,7 @@ export async function handler() {
           <p>Philadelphia, PA</p>
         </div>
       </section>
-      <section class="mb-160">
+      <section class="mb-160" id="our-story">
         <h2 class="text-50 text-center leading-100 font-candy mb-60">Our Story</h2>
         <div class="grid grid-cols-12 gap-x-40 px-50">
           <p class="col-start-3 col-end-11 text-45 leading-135">
@@ -99,7 +99,7 @@ export async function handler() {
           </div>
         </div>
       </section>
-      <section class="mb-150">
+      <section class="mb-150" id="schedule">
         <h2 class="text-50 text-center leading-100 font-candy mb-78">Wedding Day Schedule</h2>
         <div class="grid grid-cols-12 gap-x-40 px-50" data-component="schedule">
           <div class="col-start-2 col-end-6 relative mb-100">
@@ -199,14 +199,23 @@ export async function handler() {
       <section class="mb-150">
         <img src="/images/divider.png" alt="" class="max-w-[370px] mx-auto" />
       </section>
-      <section class="mb-285">
+      <section class="mb-285" id="stay">
         <h2 class="text-50 text-center leading-100 font-candy mb-35">Your Stay in Philadelphia</h2>
         <p class="text-25 text-center max-w-[45rem] mx-auto mb-100">
           Make a weekend out of it! Here’s a list of places nearby, as well as some of our favorite
           Philly spots if you’re looking to explore.
         </p>
         <div class="grid grid-cols-12 gap-x-40 items-start px-50">
-          <div class="col-span-6 rounded-r-7 h-[calc(100vh-9.2rem+1.4rem)] -ml-50 -mr-20 bg-gradient-to-b from-white to-black sticky top-[calc(7.2rem-0.7rem)]"></div>
+          <div class="col-span-6 rounded-r-7 h-[calc(100vh-9.2rem+1.4rem)] -ml-50 -mr-20 sticky top-[calc(7.2rem-0.7rem)] overflow-hidden">
+            <div class="relative w-full h-full">
+              <img
+                data-component="img"
+                data-src="/images/stay.png"
+                alt=""
+                class="absolute w-full h-full object-cover"
+              />
+            </div>
+          </div>
           <div class="col-start-8 col-span-5">
             <div class="relative max-w-[45rem] pt-250">
               <div class="text-33 leading-125 absolute right-full mr-25">♥</div>
@@ -275,7 +284,7 @@ export async function handler() {
           </div>
         </div>
       </section>
-      <section class="mb-215">
+      <section class="mb-215" id="faq">
         <h2 class="text-50 text-center leading-100 font-candy mb-40">Frequently Asked Questions</h2>
         <div class="accordion" data-component="accordion">
           <button data-sqzbx-button>
@@ -326,7 +335,7 @@ export async function handler() {
           </div>
         </div>
       </section>
-      <section class="text-center mb-95">
+      <section class="text-center mb-95" id="our-registry">
         <h2 class="text-50 text-center leading-100 font-candy mb-35">Our Registry</h2>
         <p class="text-25 text-center max-w-[45rem] mx-auto mb-50">
           You know what they say—your presence is a gift! However, if you want to give us a present,
@@ -345,7 +354,7 @@ export async function handler() {
       <section class="mb-235">
         <img src="/images/divider.png" alt="" class="max-w-[370px] mx-auto" />
       </section>
-      <section class="px-50 mb-285">
+      <section class="px-50 mb-285" id="rsvp">
         <div class="bg-tan max-w-[94.5rem] mx-auto rounded-7 [box-shadow:_0.7rem_0.7rem_0.9rem_theme('colors.blue-secondary')] px-50 py-60 h-[68.5rem] overflow-hidden flex flex-col">
           <h2 class="text-50 text-center leading-100 font-candy mb-35">RSVP</h2>
           <div class="flex-grow" data-component="form"></div>
