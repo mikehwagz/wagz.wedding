@@ -9,11 +9,11 @@ import parallax from './components/parallax'
 import accordion from './components/accordion'
 import schedule from './components/schedule'
 import form from './components/form.jsx'
-import anchorNav from './components/anchor-nav'
+import nav from './components/nav'
 
 const components = {
-  'anchor-nav': anchorNav,
   'grid-overlay': gridOverlay,
+  nav,
   form,
   link,
   marquee,

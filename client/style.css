@@ -34,7 +34,7 @@
   }
 
   html {
-    @apply text-[calc(10/1536*100vw)] bg-tan text-black;
+    @apply text-[10px] bg-tan text-black;
 
     --header-height: 6.2rem;
     --footer-height: 4rem;
