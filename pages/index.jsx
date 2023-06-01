@@ -11,7 +11,7 @@ export function getStaticPaths() {
 export async function handler() {
   return (
     <Layout>
-      <section class="mb-35">
+      {/* <section class="mb-35">
         <div class="relative h-[calc(116vh+var(--header-height))] overflow-hidden">
           <div
             class="absolute w-full h-full inset-0"
@@ -32,7 +32,7 @@ export async function handler() {
             />
           </div>
           <h1
-            class="relative top-[calc(100vh-var(--header-height))] translate-y-[-90%] z-1 w-[100rem] mx-auto text-140 leading-123 tracking-0 text-tan text-center font-candy [-webkit-text-stroke-width:0.1rem]
+            class="relative top-[calc(100vh-var(--header-height))] translate-y-[-90%] z-1 w-[100rem] mx-auto text-30 m:text-140 leading-123 tracking-0 text-tan text-center font-candy [-webkit-text-stroke-width:0.1rem]
           [-webkit-text-stroke-color:theme('colors.tan')] select-none"
           >
             Jenny & Mike’s Wedding Day!
@@ -350,19 +350,21 @@ export async function handler() {
         >
           Give a Gift
         </a>
-      </section>
+      </section> */}
       <section class="mb-235">
         <img src="/images/divider.png" alt="" class="max-w-[370px] mx-auto" />
       </section>
-      <section class="px-50 mb-285" id="rsvp">
-        <div class="bg-tan max-w-[94.5rem] mx-auto rounded-7 [box-shadow:_0.7rem_0.7rem_0.9rem_theme('colors.blue-secondary')] px-50 py-60 h-[68.5rem] overflow-hidden flex flex-col">
-          <h2 class="text-50 text-center leading-100 font-candy mb-35">RSVP</h2>
+      <section class="px-10 m:px-50 mb-285" id="rsvp">
+        <div class="bg-tan max-w-[94.5rem] mx-auto rounded-7 [box-shadow:_0.7rem_0.7rem_0.9rem_theme('colors.blue-secondary')] px-20 m:px-50 py-60 m:min-h-[68.5rem] flex flex-col">
+          <h2 class="text-40 m:text-50 text-center leading-100 font-candy mb-35">RSVP</h2>
           <div class="flex-grow" data-component="form"></div>
         </div>
       </section>
-      <footer class="text-center">
-        <p class="font-candy text-196 leading-100">Jenny & Mike</p>
-        <p class="italic">Website by the Bride & Groom ♥</p>
+      <footer class="text-center pb-30 l:pb-30">
+        <p class="font-candy text-35 2xs:text-[clamp(40px,calc(196/1536*100vw),196px)] mb-8 l:mb-0 leading-100">
+          Jenny & Mike
+        </p>
+        <p class="text-14 m:text-20 italic">Website by the Bride & Groom ♥</p>
       </footer>
     </Layout>
   )

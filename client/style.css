@@ -51,7 +51,7 @@
   }
 
   body {
-    @apply text-20 leading-150 -tracking-1 font-gooper bg-tan overflow-hidden;
+    @apply text-18 l:text-20 leading-150 -tracking-1 font-gooper bg-tan overflow-hidden;
   }
 
   a,

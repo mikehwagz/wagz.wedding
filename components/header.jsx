@@ -3,7 +3,7 @@ import { h } from 'hyposcript'
 export function Header(props) {
   return (
     <header class="fixed z-8 top-0 inset-x-0 h-[var(--header-height)] px-[var(--frame-padding)] -mx-5">
-      <nav class="relative w-full h-full text-18 l:text-20" data-component="nav">
+      <nav class="relative w-full h-full" data-component="nav">
         <button class="block m:hidden absolute top-1/2 -translate-y-1/2 left-0 p-5 z-2 js-menuToggle">
           <div class="js-menuText">Menu</div>
           <div class="absolute -translate-y-full invisible js-closeText">Close</div>

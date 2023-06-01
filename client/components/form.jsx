@@ -102,283 +102,277 @@ function App() {
   return (
     <div className="w-full h-full relative">
       <div className="relative w-full h-full max-w-[45.2rem] mx-auto">
-        <AnimatePresence initial={false} mode="popLayout">
-          <motion.div key={step} {...STEP_CONTAINER_PROPS}>
-            {step === 1 &&
-              (person === null ? (
-                <div className="pt-140">
-                  <motion.div {...NAME_LAYOUT_PROPS}>
-                    <NameAutocomplete
-                      onChange={handleNameAutocompleteChange}
-                      autoFocus={autoFocus}
-                      loading={loading}
-                    />
-                  </motion.div>
-                </div>
-              ) : !person.hasResponded ? (
-                <motion.div {...NAME_LAYOUT_PROPS}>
-                  <form className="space-y-30" onSubmit={handleSubmit}>
-                    <label className="block text-16 -tracking-1 leading-100 font-normal relative">
-                      Your Name:
-                      <input
-                        className="text-20 leading-150 -tracking-1 w-full block p-8 border-b-1 border-dashed outline-none bg-tan focus:border-solid"
-                        value={person?.name}
-                        readOnly
-                      />
-                      <button
-                        className="absolute top-[45%] right-0 pt-5 px-5 pb-3 focus-visible:outline focus-visible:outline-1 focus-visible:outline-black rounded-7"
-                        onClick={handleResetClick}
-                        type="reset"
-                      >
-                        Reset
-                      </button>
-                    </label>
-                    <motion.div
-                      className="space-y-30"
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{
-                        ...DEFAULT_TRANSITION,
-                        ease: [0.25, 1, 0.5, 1],
-                        delay: DEFAULT_DURATION / 2,
-                      }}
-                      style={{ willChange }}
-                    >
-                      <RadioGroup
-                        label="Your Response:"
-                        name="isAttending"
-                        required
-                        onChange={handleResponseChange}
-                      >
-                        <RadioItem value="Yes">Happily Accepts</RadioItem>
-                        <RadioItem value="No">Regretfully Declines</RadioItem>
-                      </RadioGroup>
-                      <RadioGroup
-                        label="Meal Selection:"
-                        name="mealOption"
-                        disabled={!person?.isAttending}
-                        required={person?.isAttending}
-                      >
-                        <RadioItem>Chicken</RadioItem>
-                        <RadioItem>Salmon</RadioItem>
-                        <RadioItem>Vegetarian</RadioItem>
-                      </RadioGroup>
-                      <TextInput
-                        label="Dietary Restrictions:"
-                        name="dietaryRestrictions"
-                        placeholder="e.g. Gluten free"
-                        disabled={!person?.isAttending}
-                      />
-                      <div className="pt-10">
-                        <button
-                          className="block relative w-full rounded-full border-1 leading-100 p-12 hover:bg-black hover:text-tan focus-visible:bg-black focus-visible:text-tan outline-none transition-colors duration-300 ease-in-out"
-                          type="submit"
-                        >
-                          <div
-                            className={classNames('transition-opacity', {
-                              'opacity-0': loading,
-                            })}
-                          >
-                            {person?.hasPlusOne || person?.group?.length > 0
-                              ? person?.isAttending
-                                ? 'Proceed to next step'
-                                : 'Submit'
-                              : 'Submit'}
-                          </div>
-                          <div
-                            className={classNames(
-                              'absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/4 transition-opacity',
-                              {
-                                'opacity-0': !loading,
-                              },
-                            )}
-                          >
-                            <div className="animate-bounce [animation-duration:0.5s]">♥</div>
-                          </div>
-                        </button>
-                      </div>
-                    </motion.div>
-                  </form>
-                </motion.div>
-              ) : (
-                <div className="text-center">
-                  <p className="text-25 text-center mb-50">
-                    Our records indicate that you have already submitted a response. If you need to
-                    change your response, please{' '}
-                    <a
-                      className="border-b-1 border-dashed hover:border-solid"
-                      href={`mailto:concierge@wagz.wedding?subject=RSVP%20Change%20Request%20for%20${person.name}`}
-                    >
-                      send us an email
-                    </a>
-                    .
-                  </p>
+        {step === 1 &&
+          (person === null ? (
+            <div className="m:pt-140">
+              <motion.div {...NAME_LAYOUT_PROPS}>
+                <NameAutocomplete
+                  onChange={handleNameAutocompleteChange}
+                  autoFocus={autoFocus}
+                  loading={loading}
+                />
+              </motion.div>
+            </div>
+          ) : !person.hasResponded ? (
+            <motion.div {...NAME_LAYOUT_PROPS}>
+              <form className="space-y-30" onSubmit={handleSubmit}>
+                <label className="block text-14 m:text-16 -tracking-1 leading-100 font-normal relative">
+                  Your Name:
+                  <input
+                    className="leading-150 -tracking-1 w-full block text-18 l:text-20 px-4 m:px-8 py-8 border-b-1 border-dashed outline-none bg-tan focus:border-solid"
+                    value={person?.name}
+                    readOnly
+                  />
                   <button
-                    className="px-35 py-14 leading-100 bg-tan border-1 rounded-full hover:bg-black hover:text-tan transition-colors duration-300 ease-in-out"
+                    className="absolute top-[40%] m:top-[45%] right-0 pt-5 m:px-5 pb-3 focus-visible:outline focus-visible:outline-1 focus-visible:outline-black rounded-7"
                     onClick={handleResetClick}
                     type="reset"
                   >
-                    Go Back
+                    Reset
                   </button>
-                </div>
-              ))}
-            {step === 2 && (
-              <form className="space-y-30" onSubmit={handleSubmit}>
-                {person?.group?.length > 1 ? (
-                  <fieldset>
-                    <legend className="text-16 -tracking-1 leading-100 font-normal mb-10">
-                      Group Responses:
-                    </legend>
-                    <div className="grid grid-cols-2 gap-10">
-                      {person?.group?.map((p, i) => (
-                        <div
-                          className="px-8 pt-5 pb-10 space-y-8 rounded-7 [box-shadow:_1px_1px_4px_rgba(0,_0,_0,_0.15)]"
-                          key={p._id}
-                        >
-                          <RadioGroup
-                            label={p.name}
-                            name={`groupIsAttending_${i}`}
-                            required
-                            onChange={handleResponseChange}
-                            size="small"
-                          >
-                            <RadioItem value="Yes">Accepts</RadioItem>
-                            <RadioItem value="No">Declines</RadioItem>
-                          </RadioGroup>
-                          <RadioGroup
-                            label="Meal Choice"
-                            name={`groupMealOption_${i}`}
-                            disabled={!person?.group?.[i]?.isAttending}
-                            required={person?.group?.[i]?.isAttending}
-                            size="small"
-                          >
-                            <RadioItem>Chicken</RadioItem>
-                            <RadioItem>Salmon</RadioItem>
-                            <RadioItem>Veg</RadioItem>
-                          </RadioGroup>
-                          <TextInput
-                            label="Dietary Restrictions"
-                            name={`groupDietaryRestrictions_${i}`}
-                            disabled={!person?.group?.[i]?.isAttending}
-                            size="small"
-                          />
-                        </div>
-                      ))}
-                    </div>
-                  </fieldset>
-                ) : (
-                  <>
-                    {person?.group?.length === 1 && (
-                      <>
-                        <RadioGroup
-                          label={`Response for ${person?.group?.[0]?.name}:`}
-                          name="groupIsAttending_0"
-                          required
-                          onChange={handleResponseChange}
-                        >
-                          <RadioItem value="Yes">Happily Accepts</RadioItem>
-                          <RadioItem value="No">Regretfully Declines</RadioItem>
-                        </RadioGroup>
-                      </>
-                    )}
-                    {person?.hasPlusOne && (
-                      <>
-                        <RadioGroup
-                          label="Will you be bringing a guest?"
-                          name="plusOneIsAttending"
-                          required
-                          onChange={handleResponseChange}
-                        >
-                          <RadioItem>Yes</RadioItem>
-                          <RadioItem>No</RadioItem>
-                        </RadioGroup>
-                        <TextInput
-                          label="Guest Name:"
-                          name="plusOneName"
-                          placeholder="Betsy Ross"
-                          disabled={!person?.plusOneIsAttending}
-                          required={person?.plusOneIsAttending}
-                        />
-                      </>
-                    )}
-                    <RadioGroup
-                      label="Meal Selection:"
-                      name={person?.hasPlusOne ? 'plusOneMealOption' : 'groupMealOption_0'}
-                      disabled={
-                        person?.hasPlusOne
-                          ? !person?.plusOneIsAttending
-                          : !person?.group?.[0]?.isAttending
-                      }
-                      required={
-                        person?.hasPlusOne
-                          ? person?.plusOneIsAttending
-                          : person?.group?.[0]?.isAttending
-                      }
+                </label>
+                <motion.div
+                  className="space-y-30"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{
+                    ...DEFAULT_TRANSITION,
+                    ease: [0.25, 1, 0.5, 1],
+                    delay: DEFAULT_DURATION / 2,
+                  }}
+                  style={{ willChange }}
+                >
+                  <RadioGroup
+                    label="Your Response:"
+                    name="isAttending"
+                    required
+                    onChange={handleResponseChange}
+                  >
+                    <RadioItem value="Yes">Happily Accepts</RadioItem>
+                    <RadioItem value="No">Regretfully Declines</RadioItem>
+                  </RadioGroup>
+                  <RadioGroup
+                    label="Meal Selection:"
+                    name="mealOption"
+                    disabled={!person?.isAttending}
+                    required={person?.isAttending}
+                  >
+                    <RadioItem>Chicken</RadioItem>
+                    <RadioItem>Salmon</RadioItem>
+                    <RadioItem>Vegetarian</RadioItem>
+                  </RadioGroup>
+                  <TextInput
+                    label="Dietary Restrictions:"
+                    name="dietaryRestrictions"
+                    placeholder="e.g. Gluten free"
+                    disabled={!person?.isAttending}
+                  />
+                  <div className="pt-10">
+                    <button
+                      className="block relative w-full rounded-full border-1 leading-100 p-12 hover:bg-black hover:text-tan focus-visible:bg-black focus-visible:text-tan outline-none transition-colors duration-300 ease-in-out"
+                      type="submit"
                     >
-                      <RadioItem>Chicken</RadioItem>
-                      <RadioItem>Salmon</RadioItem>
-                      <RadioItem>Vegetarian</RadioItem>
+                      <div
+                        className={classNames('transition-opacity', {
+                          'opacity-0': loading,
+                        })}
+                      >
+                        {person?.hasPlusOne || person?.group?.length > 0
+                          ? person?.isAttending
+                            ? 'Proceed to next step'
+                            : 'Submit'
+                          : 'Submit'}
+                      </div>
+                      <div
+                        className={classNames(
+                          'absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/4 transition-opacity',
+                          {
+                            'opacity-0': !loading,
+                          },
+                        )}
+                      >
+                        <div className="animate-bounce [animation-duration:0.5s]">♥</div>
+                      </div>
+                    </button>
+                  </div>
+                </motion.div>
+              </form>
+            </motion.div>
+          ) : (
+            <div className="text-center">
+              <p className="text-18 m:text-25 text-center mb-50">
+                Our records indicate that you have already submitted a response. If you need to
+                change your response, please{' '}
+                <a
+                  className="border-b-1 border-dashed hover:border-solid"
+                  href={`mailto:concierge@wagz.wedding?subject=RSVP%20Change%20Request%20for%20${person.name}`}
+                >
+                  send us an email
+                </a>
+                .
+              </p>
+              <button
+                className="px-35 py-14 leading-100 bg-tan border-1 rounded-full hover:bg-black hover:text-tan transition-colors duration-300 ease-in-out"
+                onClick={handleResetClick}
+                type="reset"
+              >
+                Go Back
+              </button>
+            </div>
+          ))}
+        {step === 2 && (
+          <form className="space-y-30" onSubmit={handleSubmit}>
+            {person?.group?.length > 1 ? (
+              <fieldset>
+                <legend className="text-16 -tracking-1 leading-100 font-normal mb-10">
+                  Group Responses:
+                </legend>
+                <div className="grid grid-cols-1 s:grid-cols-2 gap-10">
+                  {person?.group?.map((p, i) => (
+                    <div
+                      className="px-8 pt-5 pb-10 space-y-8 rounded-7 [box-shadow:_1px_1px_4px_rgba(0,_0,_0,_0.15)]"
+                      key={p._id}
+                    >
+                      <RadioGroup
+                        label={p.name}
+                        name={`groupIsAttending_${i}`}
+                        required
+                        onChange={handleResponseChange}
+                        size="small"
+                      >
+                        <RadioItem value="Yes">Accepts</RadioItem>
+                        <RadioItem value="No">Declines</RadioItem>
+                      </RadioGroup>
+                      <RadioGroup
+                        label="Meal Choice"
+                        name={`groupMealOption_${i}`}
+                        disabled={!person?.group?.[i]?.isAttending}
+                        required={person?.group?.[i]?.isAttending}
+                        size="small"
+                      >
+                        <RadioItem>Chicken</RadioItem>
+                        <RadioItem>Salmon</RadioItem>
+                        <RadioItem>Veg</RadioItem>
+                      </RadioGroup>
+                      <TextInput
+                        label="Dietary Restrictions"
+                        name={`groupDietaryRestrictions_${i}`}
+                        disabled={!person?.group?.[i]?.isAttending}
+                        size="small"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </fieldset>
+            ) : (
+              <>
+                {person?.group?.length === 1 && (
+                  <>
+                    <RadioGroup
+                      label={`Response for ${person?.group?.[0]?.name}:`}
+                      name="groupIsAttending_0"
+                      required
+                      onChange={handleResponseChange}
+                    >
+                      <RadioItem value="Yes">Happily Accepts</RadioItem>
+                      <RadioItem value="No">Regretfully Declines</RadioItem>
+                    </RadioGroup>
+                  </>
+                )}
+                {person?.hasPlusOne && (
+                  <>
+                    <RadioGroup
+                      label="Will you be bringing a guest?"
+                      name="plusOneIsAttending"
+                      required
+                      onChange={handleResponseChange}
+                    >
+                      <RadioItem>Yes</RadioItem>
+                      <RadioItem>No</RadioItem>
                     </RadioGroup>
                     <TextInput
-                      label="Dietary Restrictions:"
-                      placeholder="e.g. Gluten free"
-                      name={
-                        person?.hasPlusOne
-                          ? 'plusOneDietaryRestrictions'
-                          : 'groupDietaryRestrictions_0'
-                      }
-                      disabled={
-                        person?.hasPlusOne
-                          ? !person?.plusOneIsAttending
-                          : !person?.group?.[0]?.isAttending
-                      }
+                      label="Guest Name:"
+                      name="plusOneName"
+                      placeholder="Betsy Ross"
+                      disabled={!person?.plusOneIsAttending}
+                      required={person?.plusOneIsAttending}
                     />
                   </>
                 )}
-                <div className="pt-10">
-                  <button
-                    className="block relative w-full rounded-full border-1 leading-100 p-12 hover:bg-black hover:text-tan focus-visible:bg-black focus-visible:text-tan outline-none transition-colors duration-300 ease-in-out"
-                    type="submit"
-                  >
-                    <div
-                      className={classNames('transition-opacity', {
-                        'opacity-0': loading,
-                      })}
-                    >
-                      Submit
-                    </div>
-                    <div
-                      className={classNames(
-                        'absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/4 transition-opacity',
-                        {
-                          'opacity-0': !loading,
-                        },
-                      )}
-                    >
-                      <div className="animate-bounce [animation-duration:0.5s]">♥</div>
-                    </div>
-                  </button>
+                <RadioGroup
+                  label="Meal Selection:"
+                  name={person?.hasPlusOne ? 'plusOneMealOption' : 'groupMealOption_0'}
+                  disabled={
+                    person?.hasPlusOne
+                      ? !person?.plusOneIsAttending
+                      : !person?.group?.[0]?.isAttending
+                  }
+                  required={
+                    person?.hasPlusOne
+                      ? person?.plusOneIsAttending
+                      : person?.group?.[0]?.isAttending
+                  }
+                >
+                  <RadioItem>Chicken</RadioItem>
+                  <RadioItem>Salmon</RadioItem>
+                  <RadioItem>Vegetarian</RadioItem>
+                </RadioGroup>
+                <TextInput
+                  label="Dietary Restrictions:"
+                  placeholder="e.g. Gluten free"
+                  name={
+                    person?.hasPlusOne ? 'plusOneDietaryRestrictions' : 'groupDietaryRestrictions_0'
+                  }
+                  disabled={
+                    person?.hasPlusOne
+                      ? !person?.plusOneIsAttending
+                      : !person?.group?.[0]?.isAttending
+                  }
+                />
+              </>
+            )}
+            <div className="pt-10">
+              <button
+                className="block relative w-full rounded-full border-1 leading-100 p-12 hover:bg-black hover:text-tan focus-visible:bg-black focus-visible:text-tan outline-none transition-colors duration-300 ease-in-out"
+                type="submit"
+              >
+                <div
+                  className={classNames('transition-opacity', {
+                    'opacity-0': loading,
+                  })}
+                >
+                  Submit
                 </div>
-              </form>
+                <div
+                  className={classNames(
+                    'absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/4 transition-opacity',
+                    {
+                      'opacity-0': !loading,
+                    },
+                  )}
+                >
+                  <div className="animate-bounce [animation-duration:0.5s]">♥</div>
+                </div>
+              </button>
+            </div>
+          </form>
+        )}
+        {step === 3 && (
+          <p className="text-18 m:text-25 text-center">
+            {person?.isAttending ? (
+              <>
+                Thank you for confirming your attendance to our wedding celebration! We are thrilled
+                that you will be joining us on our special day.
+              </>
+            ) : (
+              <>
+                Thank you for letting us know that you won't be able to attend our wedding
+                celebration. While we will miss your presence, we understand and appreciate your
+                response.
+              </>
             )}
-            {step === 3 && (
-              <p className="text-25 text-center">
-                {person?.isAttending ? (
-                  <>
-                    Thank you for confirming your attendance to our wedding celebration! We are
-                    thrilled that you will be joining us on our special day.
-                  </>
-                ) : (
-                  <>
-                    Thank you for letting us know that you won't be able to attend our wedding
-                    celebration. While we will miss your presence, we understand and appreciate your
-                    response.
-                  </>
-                )}
-              </p>
-            )}
-          </motion.div>
-        </AnimatePresence>
+          </p>
+        )}
       </div>
     </div>
   )
@@ -453,7 +447,7 @@ function NameAutocomplete(props) {
       >
         <label
           {...autocomplete.getLabelProps({
-            className: classNames('block text-16 -tracking-1 leading-100 font-normal', {
+            className: classNames('block text-14 m:text-16 -tracking-1 leading-100 font-normal', {
               'opacity-50': props.loading,
             }),
           })}
@@ -466,7 +460,7 @@ function NameAutocomplete(props) {
               type: 'text',
               placeholder: 'Ben Franklin',
               className:
-                'text-20 leading-150 -tracking-1 w-full block p-8 border-b-1 border-dashed outline-none bg-tan focus:border-solid',
+                'leading-150 -tracking-1 w-full block text-18 l:text-20 px-4 m:px-8 py-8 border-b-1 border-dashed outline-none bg-tan focus:border-solid',
               ref: inputRef,
             })}
           />
@@ -549,7 +543,7 @@ function RadioGroup(props) {
       </legend>
       <div
         className={classNames('flex flex-wrap group', {
-          'gap-x-15 gap-y-10': props?.size !== 'small',
+          'gap-x-10 m:gap-x-15 gap-y-10': props?.size !== 'small',
           'gap-5': props?.size === 'small',
         })}
       >
@@ -577,7 +571,7 @@ function RadioItem(props) {
         className={classNames(
           'border-1 -tracking-1 cursor-pointer peer-disabled:cursor-default select-none peer-checked:border-solid peer-checked:bg-black peer-checked:text-tan',
           {
-            'border-dashed text-20 leading-150 p-10 rounded-7': size !== 'small',
+            'border-dashed leading-150 p-10 rounded-7': size !== 'small',
             'border-dotted text-14 leading-120 px-8 py-5 rounded-4': size === 'small',
           },
         )}
@@ -603,7 +597,7 @@ function TextInput({ label, size = 'large', ...rest }) {
         className={classNames(
           '-tracking-1 w-full block border-b-1 outline-none bg-tan focus:border-solid',
           {
-            'text-20 leading-150 p-8 border-dashed': size !== 'small',
+            'leading-150 p-8 border-dashed': size !== 'small',
             'text-14 leading-120 pt-5 pb-2 border-dotted': size === 'small',
           },
         )}
