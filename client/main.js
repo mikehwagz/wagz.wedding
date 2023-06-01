@@ -41,6 +41,7 @@ async function main() {
   app.lenis = new Lenis({
     lerp: 0.115,
     wrapper: app.getState().scrollWrapper,
+    content: app.getState().scrollContent,
   })
 
   app.mount()

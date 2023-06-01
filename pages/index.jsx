@@ -209,8 +209,8 @@ export async function handler() {
             favorite Philly spots if you’re looking to explore.
           </p>
         </div>
-        <div class="grid grid-cols-12 l:gap-x-40 items-start px-15 l:px-50">
-          <div class="hidden l:block col-span-6 rounded-r-7 h-[calc(100vh-9.2rem+1.4rem)] -ml-50 -mr-20 sticky top-[calc(var(--header-height)-0.7rem)] overflow-hidden">
+        <div class="grid grid-cols-12 m:gap-x-40 items-start px-15 m:px-30 l:px-50">
+          <div class="hidden m:block col-span-6 rounded-r-7 h-[calc(100vh-9.2rem+1.4rem)] -ml-50 -mr-20 sticky top-[calc(var(--header-height)-0.7rem)] overflow-hidden">
             <div class="relative w-full h-full">
               <img
                 data-component="img"
@@ -220,9 +220,10 @@ export async function handler() {
               />
             </div>
           </div>
-          <div class="col-start-1 l:col-start-8 col-span-12 l:col-span-5">
-            <div class="relative max-w-[45rem] l:pt-250 mb-80 l:mb-0">
-              <div class="hidden l:block text-25 l:text-33 leading-125 absolute right-full mr-25">
+
+          <div class="col-start-1 m:col-start-8 col-span-12 m:col-span-5 m:py-150 space-y-80 m:space-y-100">
+            <div class="relative max-w-[45rem]">
+              <div class="hidden l:block text-25 m:text-33 leading-125 absolute right-full mr-25">
                 ♥
               </div>
               <h3 class="text-25 l:text-33 leading-125 mb-25">Lodging</h3>
@@ -240,23 +241,15 @@ export async function handler() {
                 Book a Room
               </a>
             </div>
-            <div class="relative l:pt-250 mb-80 l:mb-0">
+            <div class="relative max-w-[45rem]">
               <div class="hidden l:block text-25 l:text-33 leading-125 absolute right-full mr-25">
                 ♥
               </div>
               <h3 class="text-25 l:text-33 leading-125 mb-25">Eat & Drink</h3>
-              <ul class="mb-50 max-w-[52rem] columns-2 gap-20 l:gap-80 leading-135 space-y-10">
-                <li>Wm. Mulherin’s Sons</li>
-                <li>Lark</li>
-                <li>Middle Child</li>
-                <li>LMNO</li>
-                <li>Gilda</li>
-                <li>Johnny Brenda's</li>
-                <li>International Bar</li>
-                <li>Martha</li>
-                <li>Two Robbers</li>
-                <li>Bok Bar</li>
-              </ul>
+              <p class="mb-50">
+                Wm. Mulherin’s Sons, Lark, Middle Child, LMNO, Gilda, Johnny Brenda's, International
+                Bar, Martha, Two Robbers, Bok Bar
+              </p>
               <a
                 href="#"
                 target="_blank"
@@ -267,20 +260,15 @@ export async function handler() {
                 Open Map
               </a>
             </div>
-            <div class="relative l:pt-250 l:pb-300">
+            <div class="relative max-w-[45rem]">
               <div class="hidden l:block text-25 l:text-33 leading-125 absolute right-full mr-25">
                 ♥
               </div>
               <h3 class="text-25 l:text-33 leading-125 mb-25">Things to Do</h3>
-              <ul class="mb-50 max-w-[52rem] columns-2 gap-20 l:gap-80 leading-135 space-y-10">
-                <li>Philadelphia Museum of Art</li>
-                <li>Franklin Institute</li>
-                <li>Schuylkill River Trail</li>
-                <li>Helium Comedy Club</li>
-                <li>The Barnes Foundation</li>
-                <li>Wissahickon</li>
-                <li>Eastern State Penitentiary</li>
-              </ul>
+              <p class="mb-50">
+                Philadelphia Museum of Art, Franklin Institute, Schuylkill River Trail, Helium
+                Comedy Club, The Barnes Foundation, Wissahickon, Eastern State Penitentiary
+              </p>
               <a
                 href="#"
                 target="_blank"

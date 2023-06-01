@@ -25,6 +25,7 @@ const components = {
 
 const state = {
   ...size(),
+  scrollContent: qs('#scroll-content'),
   scrollWrapper: qs('#scroll-wrapper'),
 }
 

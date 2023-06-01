@@ -64,7 +64,7 @@ export function Layout({ children }) {
               id="scroll-wrapper"
               class="w-full h-full [clip-path:inset(var(--header-height)_var(--frame-padding)_var(--frame-padding)_var(--frame-padding)_round_calc(var(--frame-border-radius)-1px))] bg-blue-primary px-[var(--frame-padding)] pb-[var(--frame-padding)] overflow-y-auto"
             >
-              {children}
+              <div id="scroll-content">{children}</div>
             </div>
           </main>
         </div>
