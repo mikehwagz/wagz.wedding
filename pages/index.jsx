@@ -12,7 +12,7 @@ export async function handler() {
   return (
     <Layout>
       <section class="mb-35">
-        <div class="relative h-[calc(116vh+7.2rem)] overflow-hidden">
+        <div class="relative h-[calc(116vh+var(--header-height))] overflow-hidden">
           <div
             class="absolute w-full h-full inset-0"
             data-component="parallax"
@@ -25,14 +25,14 @@ export async function handler() {
             )}
           >
             <img
-              class="absolute w-full h-full inset-x-0 bottom-0 top-72 object-cover object-top opacity-0 transition-opacity duration-1000 ease-in-out"
+              class="absolute w-full h-full inset-x-0 bottom-0 top-[var(--header-height)] object-cover object-top opacity-0 transition-opacity duration-1000 ease-in-out"
               data-component="img"
               data-src="/images/hero.jpg"
               alt="The bride and groom"
             />
           </div>
           <h1
-            class="relative top-[calc(100vh-7.2rem)] translate-y-[-90%] z-1 w-[100rem] mx-auto text-140 leading-123 tracking-0 text-tan text-center font-candy [-webkit-text-stroke-width:0.1rem]
+            class="relative top-[calc(100vh-var(--header-height))] translate-y-[-90%] z-1 w-[100rem] mx-auto text-140 leading-123 tracking-0 text-tan text-center font-candy [-webkit-text-stroke-width:0.1rem]
           [-webkit-text-stroke-color:theme('colors.tan')] select-none"
           >
             Jenny & Mike’s Wedding Day!
@@ -206,7 +206,7 @@ export async function handler() {
           Philly spots if you’re looking to explore.
         </p>
         <div class="grid grid-cols-12 gap-x-40 items-start px-50">
-          <div class="col-span-6 rounded-r-7 h-[calc(100vh-9.2rem+1.4rem)] -ml-50 -mr-20 sticky top-[calc(7.2rem-0.7rem)] overflow-hidden">
+          <div class="col-span-6 rounded-r-7 h-[calc(100vh-9.2rem+1.4rem)] -ml-50 -mr-20 sticky top-[calc(var(--header-height)-0.7rem)] overflow-hidden">
             <div class="relative w-full h-full">
               <img
                 data-component="img"
