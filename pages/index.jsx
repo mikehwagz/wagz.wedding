@@ -45,7 +45,7 @@ export async function handler() {
         </div>
       </section>
       <section class="mb-160" id="our-story">
-        <h2 class="text-50 text-center leading-100 font-candy mb-60">Our Story</h2>
+        <h2 class="text-28 m:text-50 text-center leading-150 font-candy mb-20">Our Story</h2>
         <div class="grid grid-cols-12 gap-x-40 px-50">
           <p class="col-start-3 col-end-11 text-45 leading-135">
             On a winter day in 2015, Jenny and Mike met in a design class at Northeastern
@@ -100,11 +100,11 @@ export async function handler() {
         </div>
       </section>
       <section class="mb-150" id="schedule">
-        <h2 class="text-50 text-center leading-100 font-candy mb-78">Wedding Day Schedule</h2>
+        <h2 class="text-28 m:text-50 text-center leading-150 font-candy mb-20">Wedding Day Schedule</h2>
         <div class="grid grid-cols-12 gap-x-40 px-50" data-component="schedule">
           <div class="col-start-2 col-end-6 relative mb-100">
-            <div class="text-33 leading-125 absolute right-full mr-25">♥</div>
-            <h3 class="text-33 leading-125 mb-20">Welcome to the Arboretum</h3>
+            <div class="text-25 l:text-33 leading-125 absolute right-full mr-25">♥</div>
+            <h3 class="text-25 l:text-33 leading-125 mb-20">Welcome to the Arboretum</h3>
             <p class="leading-100 italic mb-15">5:00 pm – 5:45 pm</p>
             <p class="text-justify">
               Entry to Morris Arboretum begins at 5 pm. Free parking is available on site, and
@@ -135,8 +135,8 @@ export async function handler() {
             </svg>
           </div>
           <div class="col-start-8 col-end-12 row-start-2 relative mb-170">
-            <div class="text-33 leading-125 absolute right-full mr-25">♥</div>
-            <h3 class="text-33 leading-125 mb-20">The Ceremony</h3>
+            <div class="text-25 l:text-33 leading-125 absolute right-full mr-25">♥</div>
+            <h3 class="text-25 l:text-33 leading-125 mb-20">The Ceremony</h3>
             <p class="leading-100 italic mb-15">6:00 pm – 6:30 pm · Baxter Memorial</p>
             <p class="text-justify">
               Make your way over to Baxter Memorial for the I Do’s part of the night. Staff will be
@@ -145,8 +145,8 @@ export async function handler() {
             </p>
           </div>
           <div class="col-start-3 col-end-7 row-start-3 relative mb-230">
-            <div class="text-33 leading-125 absolute right-full mr-25">♥</div>
-            <h3 class="text-33 leading-125 mb-20">Cocktail Hour</h3>
+            <div class="text-25 l:text-33 leading-125 absolute right-full mr-25">♥</div>
+            <h3 class="text-25 l:text-33 leading-125 mb-20">Cocktail Hour</h3>
             <p class="leading-100 italic mb-15">6:30 pm – 7:30 pm · Out on a Limb</p>
             <p class="text-justify">
               Follow staff to our cocktail hour in the trees! Alcoholic and soft drinks will be
@@ -175,8 +175,8 @@ export async function handler() {
             </svg>
           </div>
           <div class="col-start-7 col-end-11 row-start-4 relative">
-            <div class="text-33 leading-125 absolute right-full mr-25">♥</div>
-            <h3 class="text-33 leading-125 mb-20">The Reception</h3>
+            <div class="text-25 l:text-33 leading-125 absolute right-full mr-25">♥</div>
+            <h3 class="text-25 l:text-33 leading-125 mb-20">The Reception</h3>
             <p class="leading-100 italic mb-15">7:30 pm – 11:00 pm · Visitor’s Center Tent</p>
             <p class="text-justify">
               Join us for our wedding reception and continue the celebration with delicious food and
@@ -185,8 +185,8 @@ export async function handler() {
             </p>
           </div>
           <div class="col-start-5 col-end-9 row-start-5 relative">
-            <div class="text-33 leading-125 absolute right-full mr-25">♥</div>
-            <h3 class="text-33 leading-125 mb-20">After Party</h3>
+            <div class="text-25 l:text-33 leading-125 absolute right-full mr-25">♥</div>
+            <h3 class="text-25 l:text-33 leading-125 mb-20">After Party</h3>
             <p class="leading-100 italic mb-15">11:00 pm – 1:00 am · Manayunk Brewing Co</p>
             <p class="text-justify">
               Follow staff to our cocktail hour in the trees! Alcoholic and soft drinks will be
@@ -195,18 +195,22 @@ export async function handler() {
             </p>
           </div>
         </div>
+      </section> */}
+      <section class="mb-100 m:mb-150 px-50">
+        <img src="/images/divider.png" alt="" class="w-full max-w-[370px] mx-auto" />
       </section>
-      <section class="mb-150">
-        <img src="/images/divider.png" alt="" class="max-w-[370px] mx-auto" />
-      </section>
-      <section class="mb-285" id="stay">
-        <h2 class="text-50 text-center leading-100 font-candy mb-35">Your Stay in Philadelphia</h2>
-        <p class="text-25 text-center max-w-[45rem] mx-auto mb-100">
-          Make a weekend out of it! Here’s a list of places nearby, as well as some of our favorite
-          Philly spots if you’re looking to explore.
-        </p>
-        <div class="grid grid-cols-12 gap-x-40 items-start px-50">
-          <div class="col-span-6 rounded-r-7 h-[calc(100vh-9.2rem+1.4rem)] -ml-50 -mr-20 sticky top-[calc(var(--header-height)-0.7rem)] overflow-hidden">
+      <section class="mb-100 m:mb-285" id="stay">
+        <div class="px-30 mb-100">
+          <h2 class="text-28 m:text-50 text-center leading-150 font-candy mb-20">
+            Your Stay in Philadelphia
+          </h2>
+          <p class="text-18 m:text-25 text-center max-w-[45rem] mx-auto">
+            Make a weekend out of it! Here’s a list of places nearby, as well as some of our
+            favorite Philly spots if you’re looking to explore.
+          </p>
+        </div>
+        <div class="grid grid-cols-12 l:gap-x-40 items-start px-15 l:px-50">
+          <div class="hidden l:block col-span-6 rounded-r-7 h-[calc(100vh-9.2rem+1.4rem)] -ml-50 -mr-20 sticky top-[calc(var(--header-height)-0.7rem)] overflow-hidden">
             <div class="relative w-full h-full">
               <img
                 data-component="img"
@@ -216,10 +220,12 @@ export async function handler() {
               />
             </div>
           </div>
-          <div class="col-start-8 col-span-5">
-            <div class="relative max-w-[45rem] pt-250">
-              <div class="text-33 leading-125 absolute right-full mr-25">♥</div>
-              <h3 class="text-33 leading-125 mb-25">Lodging</h3>
+          <div class="col-start-1 l:col-start-8 col-span-12 l:col-span-5">
+            <div class="relative max-w-[45rem] l:pt-250 mb-80 l:mb-0">
+              <div class="hidden l:block text-25 l:text-33 leading-125 absolute right-full mr-25">
+                ♥
+              </div>
+              <h3 class="text-25 l:text-33 leading-125 mb-25">Lodging</h3>
               <p class="mb-50">
                 There will be shuttles with limited seating available from the Marriott Residence
                 Inn in Bala Cynwyd to the event. We hope you can join us!
@@ -234,10 +240,12 @@ export async function handler() {
                 Book a Room
               </a>
             </div>
-            <div class="relative pt-250">
-              <div class="text-33 leading-125 absolute right-full mr-25">♥</div>
-              <h3 class="text-33 leading-125 mb-25">Eat & Drink</h3>
-              <ul class="mb-50 max-w-[52rem] columns-2 gap-80 leading-135 space-y-10">
+            <div class="relative l:pt-250 mb-80 l:mb-0">
+              <div class="hidden l:block text-25 l:text-33 leading-125 absolute right-full mr-25">
+                ♥
+              </div>
+              <h3 class="text-25 l:text-33 leading-125 mb-25">Eat & Drink</h3>
+              <ul class="mb-50 max-w-[52rem] columns-2 gap-20 l:gap-80 leading-135 space-y-10">
                 <li>Wm. Mulherin’s Sons</li>
                 <li>Lark</li>
                 <li>Middle Child</li>
@@ -259,10 +267,12 @@ export async function handler() {
                 Open Map
               </a>
             </div>
-            <div class="relative pt-250 pb-300">
-              <div class="text-33 leading-125 absolute right-full mr-25">♥</div>
-              <h3 class="text-33 leading-125 mb-25">Things to Do</h3>
-              <ul class="mb-50 max-w-[52rem] columns-2 gap-80 leading-135 space-y-10">
+            <div class="relative l:pt-250 l:pb-300">
+              <div class="hidden l:block text-25 l:text-33 leading-125 absolute right-full mr-25">
+                ♥
+              </div>
+              <h3 class="text-25 l:text-33 leading-125 mb-25">Things to Do</h3>
+              <ul class="mb-50 max-w-[52rem] columns-2 gap-20 l:gap-80 leading-135 space-y-10">
                 <li>Philadelphia Museum of Art</li>
                 <li>Franklin Institute</li>
                 <li>Schuylkill River Trail</li>
@@ -284,12 +294,14 @@ export async function handler() {
           </div>
         </div>
       </section>
-      <section class="mb-215" id="faq">
-        <h2 class="text-50 text-center leading-100 font-candy mb-40">Frequently Asked Questions</h2>
+      <section class="mb-100 m:mb-215" id="faq">
+        <h2 class="text-28 m:text-50 text-center leading-150 font-candy mb-20">
+          Frequently Asked Questions
+        </h2>
         <div class="accordion" data-component="accordion">
           <button data-sqzbx-button>
             <h3>
-              <div class="inline-block w-58 mr-40">♥</div>Lorem ipsum dolor sit amet
+              <div class="hidden m:inline-block w-58 mr-40">♥</div>Lorem ipsum dolor sit amet
             </h3>
           </button>
           <div data-sqzbx-panel>
@@ -302,7 +314,7 @@ export async function handler() {
           </div>
           <button data-sqzbx-button>
             <h3>
-              <div class="inline-block w-58 mr-40">♥</div>Lorem ipsum dolor sit amet
+              <div class="hidden m:inline-block w-58 mr-40">♥</div>Lorem ipsum dolor sit amet
             </h3>
           </button>
           <div data-sqzbx-panel>
@@ -315,7 +327,7 @@ export async function handler() {
           </div>
           <button data-sqzbx-button>
             <h3>
-              <div class="inline-block w-58 mr-40">♥</div>Lorem ipsum dolor sit amet
+              <div class="hidden m:inline-block w-58 mr-40">♥</div>Lorem ipsum dolor sit amet
             </h3>
           </button>
           <div data-sqzbx-panel>
@@ -335,9 +347,9 @@ export async function handler() {
           </div>
         </div>
       </section>
-      <section class="text-center mb-95" id="our-registry">
-        <h2 class="text-50 text-center leading-100 font-candy mb-35">Our Registry</h2>
-        <p class="text-25 text-center max-w-[45rem] mx-auto mb-50">
+      <section class="text-center mb-95 px-30" id="our-registry">
+        <h2 class="text-28 m:text-50 text-center leading-150 font-candy mb-20">Our Registry</h2>
+        <p class="text-18 m:text-25 text-center max-w-[45rem] mx-auto mb-50">
           You know what they say—your presence is a gift! However, if you want to give us a present,
           we’re registered at Zola.
         </p>
@@ -350,13 +362,13 @@ export async function handler() {
         >
           Give a Gift
         </a>
-      </section> */}
-      <section class="mb-235">
-        <img src="/images/divider.png" alt="" class="max-w-[370px] mx-auto" />
       </section>
-      <section class="px-10 m:px-50 mb-285" id="rsvp">
+      <section class="mb-100 m:mb-235 px-50">
+        <img src="/images/divider.png" alt="" class="w-full max-w-[370px] mx-auto" />
+      </section>
+      <section class="px-10 m:px-50 mb-100 m:mb-285" id="rsvp">
         <div class="bg-tan max-w-[94.5rem] mx-auto rounded-7 [box-shadow:_0.7rem_0.7rem_0.9rem_theme('colors.blue-secondary')] px-20 m:px-50 py-60 m:min-h-[68.5rem] flex flex-col">
-          <h2 class="text-40 m:text-50 text-center leading-100 font-candy mb-35">RSVP</h2>
+          <h2 class="text-28 m:text-50 text-center leading-150 font-candy mb-20">RSVP</h2>
           <div class="flex-grow" data-component="form"></div>
         </div>
       </section>

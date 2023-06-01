@@ -121,13 +121,19 @@
 
       position: relative;
       width: 100%;
-      padding: 4.5rem 29.6rem 4.5rem 2.5rem;
       text-align: left;
-      font-size: 3.4rem;
       line-height: 1.35;
 
       &:nth-of-type(odd) {
         background-color: theme('colors.blue-secondary');
+      }
+
+      padding: 1.5rem 5rem 1.5rem 1rem;
+      font-size: 1.8rem;
+
+      @screen m {
+        padding: 4.5rem 29.6rem 4.5rem 2.5rem;
+        font-size: 3.4rem;
       }
     }
 
@@ -138,10 +144,16 @@
       top: 50%;
       margin-top: -1px;
       background-color: black;
-      transition: transform 500ms theme('transitionTimingFunction.in-out-cubic');
-      height: 2px;
-      width: 5.7rem;
-      right: 3rem;
+      transition: transform 500ms theme('transitionTimingFunction.out-back');
+      height: 1px;
+      width: 2.5rem;
+      right: 1.5rem;
+
+      @screen m {
+        height: 2px;
+        width: 5.7rem;
+        right: 3rem;
+      }
     }
 
     [data-sqzbx-button]::after {
@@ -173,7 +185,17 @@
     }
 
     [data-sqzbx-panel] p {
-      padding: 0 50rem 4.5rem 12.3rem;
+      padding: 0 1rem 1.5rem 1rem;
+      font-size: 1.6rem;
+
+      @screen m {
+        padding: 0 50rem 4.5rem 12.3rem;
+        font-size: 1.8rem;
+      }
+
+      @screen l {
+        font-size: 2rem;
+      }
     }
   }
 }
