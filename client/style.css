@@ -36,6 +36,10 @@
   html {
     @apply text-[10px] bg-tan text-black;
 
+    @media (min-width: 1536px) {
+      @apply text-[calc(10/1536*100vw)];
+    }
+
     --header-height: 6.4rem;
     --frame-border-radius: 2rem;
     --frame-padding: 1.5rem;
@@ -74,8 +78,6 @@
 
 @layer components {
   .notched {
-    --notch-size: 5.7rem;
-
     clip-path: polygon(
       0% var(--notch-size),
       var(--notch-size) 0%,
@@ -196,6 +198,22 @@
       @screen l {
         font-size: 2rem;
       }
+    }
+  }
+
+  .story {
+    @apply m:max-w-[calc(945/1536*100vw)] mx-auto text-[clamp(18px,calc(45/1536*100vw),45px)];
+
+    @media (min-width: 1536px) {
+      @apply text-45;
+    }
+  }
+
+  #schedule .svg-wrapper {
+    display: none;
+
+    @screen l {
+      display: block;
     }
   }
 }
