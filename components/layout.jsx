@@ -2,13 +2,22 @@ import { h } from 'hyposcript'
 import manifest from '../manifest.json'
 import { Header } from './header'
 
+function getLiveURL() {
+  return {
+    production: 'https://wagz.wedding',
+    'branch-deploy': process.env.DEPLOY_PRIME_URL,
+    'deploy-preview': process.env.DEPLOY_PRIME_URL,
+    dev: 'http://localhost:4000',
+  }[process.env.CONTEXT]
+}
+
 export function Layout({ children }) {
   const shareTitle = "Jenny & Mike's Wedding Day!"
   const shareDescription =
     'September 23, 2023 at Morris Arboretum of the University of Pennsylvania in Philadelphia, PA'
   const shareImage = {
     url: `${
-      process.env.NODE_ENV === 'production' ? 'https://wagz.wedding' : 'http://localhost:4000'
+      process.env.NODE_ENV === 'production' ? getLiveURL() : 'http://localhost:4000'
     }/images/share.jpg`,
     alt: 'Jenny + Mike 9.23.23',
     width: 1200,
