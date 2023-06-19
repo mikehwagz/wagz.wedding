@@ -53,13 +53,29 @@ export async function handler() {
       <section class="mb-80 m:mb-160" id="our-story">
         <h2 class="text-28 m:text-50 text-center leading-150 font-candy mb-20">Our Story</h2>
         <div class="px-25 s:px-50">
-          <p class="story leading-135 text-justify">
-            On a winter day in 2015, Jenny and Mike met in a design class at Northeastern
-            University. During class, Jen noticed Mike staring at her while he was eating an
-            avocado. Jen went home that night and told her roommates about the mysterious,
-            mustachioed man giving her eyes while Mike ___________. A couple weeks later, Mike
-            played a song for Jen while they were in line waiting for Subway.{' '}
-          </p>
+          <div class="story mx-auto text-[clamp(18px,calc(45/1536*100vw),45px)] leading-135 text-justify space-y-30">
+            <p class="indent-[10%]">
+              Jenny and Mike met in a design course back in 2015 while attending college in Boston.
+              Mike had seen Jenny around campus and he’d be lying if he told you he wasn’t excited
+              to be in her class. Jenny had no idea who he was. During a studio snack break, Mike
+              was eating an avocado with a spoon (it was a weird phase) and unintentionally staring
+              at Jen. Later that night she told her roommates about the mysterious, mustachioed man
+              who was making eyes at her. She was intrigued.
+            </p>
+            <p>
+              The following week, Mike approached Jen while she was waiting in line at the Subway™️
+              on campus. Mike had randomly been listening to “You Get What You Give” by The New
+              Radicals on repeat that week, so he decided to play it over his phone while she waited
+              for her tuna sub. Jen recognized the song and so did the Subway™ employee making her
+              sandwich.
+            </p>
+            <p>
+              Jenny and Mike ended up eating together and immediately clicked. The rest was history.
+              They finished college, moved to Philly, started a design studio together, and adopted
+              their beloved pup, Greta Marie. To this day, Subway™ and that song by The New Radicals
+              holds a special place in their hearts.
+            </p>
+          </div>
         </div>
       </section>
       <section class="mb-80">
@@ -115,13 +131,13 @@ export async function handler() {
               ♥
             </div>
             <h3 class="text-25 l:text-33 leading-125 mb-15 m:mb-20">Welcome to the Arboretum</h3>
-            <p class="text-16 m:text-20 leading-120 italic mb-15">5:00 pm – 5:45 pm</p>
+            <p class="text-16 m:text-20 leading-120 italic mb-15">5:00 pm – 5:30 pm</p>
             <p class="text-justify">
-              Entry to Morris Arboretum begins at 5 pm. Free parking is available on site, and
-              shuttles from the hotel will be arriving at 5:00 and 5:20. We’ll have the whole park
-              to ourselves for the night, so feel free to explore the grounds while it’s still light
-              out. Some of our favorite locations are the Rose Garden, Pennock Flower Walk, and the
-              sculptures in Azalea Meadow.
+              Entry to Morris Arboretum begins at 5 pm. Free parking is available on site. There
+              will also be two shuttle busses from the hotel. We’ll have the whole park to ourselves
+              for the night, so feel free to explore the grounds while it’s still light out. Some of
+              our favorite locations are the Rose Garden, Pennock Flower Walk, and the sculptures in
+              Azalea Meadow.
             </p>
           </div>
           <div class="svg-wrapper col-start-6 col-end-9 pt-25 pb-40">
@@ -150,13 +166,13 @@ export async function handler() {
             </div>
             <h3 class="text-25 l:text-33 leading-125 mb-15 m:mb-20">The Ceremony</h3>
             <p class="text-16 m:text-20 leading-120 italic mb-15">
-              6:00 pm – 6:30 pm<span class="hidden s:inline"> · </span>
+              5:45 pm – 6:30 pm<span class="hidden s:inline"> · </span>
               <br class="s:hidden" />
               Baxter Memorial
             </p>
             <p class="text-justify">
               Make your way over to Baxter Memorial for the I Do’s part of the night. Staff will be
-              on-site to direct you to your seats. For anyone who may need assistance, golf carts
+              on site to direct you to your seats. For anyone who may need assistance, golf carts
               and drivers will be available to transport to the ceremony location.
             </p>
           </div>
@@ -171,9 +187,9 @@ export async function handler() {
               Out on a Limb
             </p>
             <p class="text-justify">
-              Follow staff to our cocktail hour in the trees! Alcoholic and soft drinks will be
-              available alongside passed appetizers. Grab a drink and hang out in the hammocks while
-              catching up with friends and family.
+              Follow staff to our cocktail hour in the trees! Hard and soft drinks will be available
+              alongside passed appetizers. Grab a drink and hang out in the hammocks while catching
+              up with friends and family.
             </p>
           </div>
           <div class="svg-wrapper col-start-5 col-end-12 row-start-3 pt-25 px-25">
@@ -207,9 +223,8 @@ export async function handler() {
               Visitor’s Center Tent
             </p>
             <p class="text-justify">
-              Join us for our wedding reception and continue the celebration with delicious food and
-              refreshing drinks. We'll have a beautifully decorated space for you to relax, mingle,
-              and dance the night away. Let's create unforgettable memories with friends and family!
+              And now for the main event. Head to the tent for our reception and continue the
+              celebration with dinner, drinks, and dancing. We can't wait to party with all of you!
             </p>
           </div>
           <div class="col-start-1 600:col-start-2 m:col-start-3 l:col-start-5 col-end-13 600:col-end-11 m:col-end-9 row-start-5 relative">
@@ -223,9 +238,9 @@ export async function handler() {
               Manayunk Brewing Co
             </p>
             <p class="text-justify">
-              Follow staff to our cocktail hour in the trees! Alcoholic and soft drinks will be
-              available alongside passed appetizers. Grab a drink and hang out in the hammocks while
-              catching up with friends and family.
+              After the reception, we'll be heading back toward the hotel to Manayunk Brewing Co for
+              an after party. There will be a shuttle available from the reception to the after
+              party. Let's keep the party going!
             </p>
           </div>
         </div>
@@ -323,7 +338,7 @@ export async function handler() {
         <div class="accordion" data-component="accordion">
           <button data-sqzbx-button>
             <h3>
-              <div class="hidden m:inline-block w-58 mr-40">♥</div>Lorem ipsum dolor sit amet
+              <div class="hidden m:inline-block w-58 mr-40">♥</div>What is the dress code?
             </h3>
           </button>
           <div data-sqzbx-panel>
@@ -336,7 +351,8 @@ export async function handler() {
           </div>
           <button data-sqzbx-button>
             <h3>
-              <div class="hidden m:inline-block w-58 mr-40">♥</div>Lorem ipsum dolor sit amet
+              <div class="hidden m:inline-block w-58 mr-40">♥</div>Is there parking available at the
+              wedding venue?
             </h3>
           </button>
           <div data-sqzbx-panel>
@@ -349,7 +365,48 @@ export async function handler() {
           </div>
           <button data-sqzbx-button>
             <h3>
-              <div class="hidden m:inline-block w-58 mr-40">♥</div>Lorem ipsum dolor sit amet
+              <div class="hidden m:inline-block w-58 mr-40">♥</div>Is the venue wheelchair
+              accessible?
+            </h3>
+          </button>
+          <div data-sqzbx-panel>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+              exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+              dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+              nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+              aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+              veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+              dolore eu fugiat nulla pariatur.
+            </p>
+          </div>
+          <button data-sqzbx-button>
+            <h3>
+              <div class="hidden m:inline-block w-58 mr-40">♥</div>When should I RSVP by?
+            </h3>
+          </button>
+          <div data-sqzbx-panel>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+              exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+              dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+              nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+              aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+              veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+              dolore eu fugiat nulla pariatur.
+            </p>
+          </div>
+          <button data-sqzbx-button>
+            <h3>
+              <div class="hidden m:inline-block w-58 mr-40">♥</div>Can I take photos?
             </h3>
           </button>
           <div data-sqzbx-panel>

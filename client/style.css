@@ -202,7 +202,7 @@
   }
 
   .story {
-    @apply m:max-w-[calc(945/1536*100vw)] mx-auto text-[clamp(18px,calc(45/1536*100vw),45px)];
+    @apply m:max-w-[calc(945/1536*100vw)];
 
     @media (min-width: 1536px) {
       @apply text-45;
