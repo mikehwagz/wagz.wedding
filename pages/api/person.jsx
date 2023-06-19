@@ -72,6 +72,6 @@ export async function handler(ev) {
 
   return {
     statusCode: 200,
-    body: { response: 'Love is real!' },
+    body: { response: 'Love is real' },
   }
 }
