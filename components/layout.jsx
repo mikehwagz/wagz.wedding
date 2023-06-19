@@ -3,6 +3,18 @@ import manifest from '../manifest.json'
 import { Header } from './header'
 
 export function Layout({ children }) {
+  const shareTitle = "Jenny & Mike's Wedding Day!"
+  const shareDescription =
+    'September 23, 2023 at Morris Arboretum of the University of Pennsylvania in Philadelphia, PA'
+  const shareImage = {
+    url: `${
+      process.env.NODE_ENV === 'production' ? 'https://wagz.wedding' : 'http://localhost:4000'
+    }/images/share.jpg`,
+    alt: 'Jenny + Mike 9.23.23',
+    width: 1200,
+    height: 630,
+  }
+
   return `<!DOCTYPE html>${(
     <html lang="en">
       <head>
@@ -17,35 +29,26 @@ export function Layout({ children }) {
         <link rel="preload" href={`/${manifest['main.css']}`} as="style" />
         <link rel="preload" href={`/${manifest['main.js']}`} as="script" />
 
-        <title>wagz.wedding</title>
-        {/* <meta content={shareDescription} name="description" /> */}
+        <title>{shareTitle}</title>
+        <meta content={shareDescription} name="description" />
 
         {/* Open Graph */}
         <meta content="website" property="og:type" />
-        {/* <meta content={shareTitle} property="og:site_name" />
+        <meta content={shareTitle} property="og:site_name" />
         <meta content={shareTitle} property="og:title" />
-        <meta content={shareDescription} property="og:description" /> */}
-
-        {/* {shareImage ? (
-          <>
-            <meta content={shareImage.url} property="og:image" />
-            <meta content={shareImage.alt} property="og:image:alt" />
-            <meta content={shareImage.width} property="og:image:width" />
-            <meta content={shareImage.height} property="og:image:height" />
-          </>
-        ) : null} */}
+        <meta content={shareDescription} property="og:description" />
+        <meta content={shareImage.url} property="og:image" />
+        <meta content={shareImage.alt} property="og:image:alt" />
+        <meta content={shareImage.width} property="og:image:width" />
+        <meta content={shareImage.height} property="og:image:height" />
 
         {/* Twitter Card */}
-        {/* <meta content="summary_large_image" name="twitter:card" />
-        <meta content={site.url} name="twitter:url" />
+        <meta content="summary_large_image" name="twitter:card" />
+        <meta content="https://wagz.wedding" name="twitter:url" />
         <meta content={shareTitle} name="twitter:title" />
         <meta content={shareDescription} name="twitter:description" />
-        {shareImage ? (
-          <>
-            <meta content={shareImage.url} name="twitter:image" />
-            <meta content={shareImage.alt} name="twitter:image:alt" />
-          </>
-        ) : null} */}
+        <meta content={shareImage.url} name="twitter:image" />
+        <meta content={shareImage.alt} name="twitter:image:alt" />
 
         <link
           rel="icon"
