@@ -37,7 +37,7 @@ export async function handler(ev) {
         isAttending: data.isAttending,
         mealOption: data.mealOption,
         dietaryRestrictions: data.dietaryRestrictions,
-        // hasResponded: true,
+        hasResponded: true,
         ...(data.isAttending && data.hasPlusOne
           ? {
               plusOneName: data.plusOneName,
@@ -56,7 +56,7 @@ export async function handler(ev) {
             isAttending: person.isAttending,
             mealOption: data[`groupMealOption_${i}`],
             dietaryRestrictions: data[`groupDietaryRestrictions_${i}`],
-            // hasResponded: true,
+            hasResponded: true,
           }),
         )
       })
