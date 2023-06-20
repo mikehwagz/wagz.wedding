@@ -137,6 +137,10 @@
         padding: 4.5rem 29.6rem 4.5rem 2.5rem;
         font-size: 3.4rem;
       }
+
+      h3 {
+        @apply flex;
+      }
     }
 
     [data-sqzbx-button]::before,

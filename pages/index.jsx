@@ -239,8 +239,8 @@ export async function handler() {
             </p>
             <p class="text-justify">
               After the reception, we'll be heading back toward the hotel to Manayunk Brewing Co for
-              an after party. There will be a shuttle available from the reception to the after
-              party. Let's keep the party going!
+              a low-key, nothing fancy after party. There will be a shuttle available from the
+              reception to the brewery, on the main street of Manayunk. Let's keep the party going!
             </p>
           </div>
         </div>
@@ -278,7 +278,7 @@ export async function handler() {
               <h3 class="text-25 l:text-33 leading-125 mb-20 m:mb-25">Lodging</h3>
               <p class="mb-30 m:mb-50">
                 There will be shuttles with limited seating available from the Marriott Residence
-                Inn in Bala Cynwyd to the event. We hope you can join us!
+                Inn in Bala Cynwyd to the event and back. We hope you can join us!
               </p>
               <a
                 href="https://www.marriott.com/events/start.mi?id=1659021055198&key=GRP"
@@ -338,90 +338,99 @@ export async function handler() {
         <div class="accordion" data-component="accordion">
           <button data-sqzbx-button>
             <h3>
-              <div class="hidden m:inline-block w-58 mr-40">♥</div>What is the dress code?
+              <div class="hidden m:inline-block w-58 mr-40 flex-shrink-0">♥</div>What is the dress
+              code?
             </h3>
           </button>
           <div data-sqzbx-panel>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-              exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-              dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              Our wedding is Semi-Formal/Black Tie Optional. There’s no need to dress super fancy,
+              but dress to impress if your heart desires!
             </p>
           </div>
           <button data-sqzbx-button>
             <h3>
-              <div class="hidden m:inline-block w-58 mr-40">♥</div>Is there parking available at the
-              wedding venue?
+              <div class="hidden m:inline-block w-58 mr-40 flex-shrink-0">♥</div>Is there parking
+              available at the wedding venue?
             </h3>
           </button>
           <div data-sqzbx-panel>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-              exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-              dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              Yes! There is plenty of free parking available at the venue. Please refrain from
+              driving if you plan to consume alcoholic beverages. There are plenty of Ubers
+              available in the area.
             </p>
           </div>
           <button data-sqzbx-button>
             <h3>
-              <div class="hidden m:inline-block w-58 mr-40">♥</div>Is the venue wheelchair
-              accessible?
+              <div class="hidden m:inline-block w-58 mr-40 flex-shrink-0">♥</div>Will there be
+              shuttle service to and from the event?
             </h3>
           </button>
           <div data-sqzbx-panel>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-              exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-              dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-              nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-              aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-              veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-              dolore eu fugiat nulla pariatur.
+              We will have two shuttles with limited seating available to and from our hotel, the
+              Marriott Residence Inn in Bala Cynwyd, to the event at Morris Arboretum. If seating
+              runs out, please let our older guests ride in the shuttle and opt to take an Uber
+              instead :-)
             </p>
           </div>
           <button data-sqzbx-button>
             <h3>
-              <div class="hidden m:inline-block w-58 mr-40">♥</div>When should I RSVP by?
+              <div class="hidden m:inline-block w-58 mr-40 flex-shrink-0">♥</div>Is the wedding
+              inside or outside?
             </h3>
           </button>
           <div data-sqzbx-panel>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-              exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-              dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-              nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-              aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-              veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-              dolore eu fugiat nulla pariatur.
+              Weather permitting, the ceremony and cocktail hour will both be held outside. The
+              reception is under a tent.
             </p>
           </div>
           <button data-sqzbx-button>
             <h3>
-              <div class="hidden m:inline-block w-58 mr-40">♥</div>Can I take photos?
+              <div class="hidden m:inline-block w-58 mr-40 flex-shrink-0">♥</div>Are the ceremony
+              and reception locations wheelchair accessible?
             </h3>
           </button>
           <div data-sqzbx-panel>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-              exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-              dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-              nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-              aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-              veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-              dolore eu fugiat nulla pariatur.
+              Yes! A big reason we chose Morris Arboretum was because of it’s accessibility.
+              Additionally, golf carts will be available to transport guests with mobility
+              restrictions to the ceremony location. Please note that the ceremony will be on grass.
+            </p>
+          </div>
+          <button data-sqzbx-button>
+            <h3>
+              <div class="hidden m:inline-block w-58 mr-40 flex-shrink-0">♥</div>When should I RSVP
+              by?
+            </h3>
+          </button>
+          <div data-sqzbx-panel>
+            <p>Please RSVP by August 15, 2023.</p>
+          </div>
+          <button data-sqzbx-button>
+            <h3>
+              <div class="hidden m:inline-block w-58 mr-40 flex-shrink-0">♥</div>Are children
+              invited?
+            </h3>
+          </button>
+          <div data-sqzbx-panel>
+            <p>
+              Unless specified in your invitation, we cannot accommodate young children at the
+              event.
+            </p>
+          </div>
+          <button data-sqzbx-button>
+            <h3>
+              <div class="hidden m:inline-block w-58 mr-40 flex-shrink-0">♥</div>Can I take photos?
+            </h3>
+          </button>
+          <div data-sqzbx-panel>
+            <p>
+              Go for it. We love photos. Take a ton (and share them with us!) All we ask is if you
+              see our wedding photographer trying to get a shot, please hide your phone so she can
+              get some phone-less shots. Thanks!
             </p>
           </div>
         </div>
