@@ -119,7 +119,7 @@ function App() {
                 <label className="block text-14 m:text-16 -tracking-1 leading-100 font-normal relative">
                   Your Name:
                   <input
-                    className="leading-150 -tracking-1 w-full block text-18 l:text-20 px-4 m:px-8 py-8 border-b-1 border-dashed outline-none bg-tan focus:border-solid"
+                    className="leading-150 -tracking-1 w-full block text-18 l:text-20 px-4 m:px-8 py-8 border-b-1 border-dashed rounded-0 outline-none bg-tan focus:border-solid"
                     value={person?.name}
                     readOnly
                   />
@@ -460,7 +460,7 @@ function NameAutocomplete(props) {
               type: 'text',
               placeholder: 'Ben Franklin',
               className:
-                'leading-150 -tracking-1 w-full block text-18 l:text-20 px-4 m:px-8 py-8 border-b-1 border-dashed outline-none bg-tan focus:border-solid',
+                'leading-150 -tracking-1 w-full block text-18 l:text-20 px-4 m:px-8 py-8 rounded-0 border-b-1 border-dashed outline-none bg-tan focus:border-solid',
               ref: inputRef,
             })}
           />
@@ -493,7 +493,7 @@ function NameAutocomplete(props) {
                       <li key={item.objectID}>
                         <button
                           className={classNames(
-                            'block w-full text-left px-8 py-5 hover:bg-black hover:text-tan',
+                            'block w-full text-left px-8 py-10 s:py-5 hover:bg-black hover:text-tan',
                             {
                               'bg-black text-tan': autocompleteState.activeItemId === j,
                             },
@@ -595,7 +595,7 @@ function TextInput({ label, size = 'large', ...rest }) {
       <input
         type="text"
         className={classNames(
-          '-tracking-1 w-full block border-b-1 outline-none bg-tan focus:border-solid',
+          '-tracking-1 w-full block border-b-1 outline-none rounded-0 bg-tan focus:border-solid',
           {
             'leading-150 p-8 border-dashed': size !== 'small',
             'text-14 leading-120 pt-5 pb-2 border-dotted': size === 'small',

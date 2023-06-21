@@ -8,7 +8,6 @@ import { createFocusTrap } from 'focus-trap'
 import { signal } from '../lib/signal'
 
 export default component((node, ctx) => {
-  let isMenuOpen = false
   const [open, setOpen] = signal(false, update)
 
   const { links, menuLinks, menuToggle, menuText, closeText, menu } = choozy(node)
@@ -36,6 +35,10 @@ export default component((node, ctx) => {
   on(allLinks, 'click', ev => {
     ev.preventDefault()
 
+    if (open()) {
+      setOpen(false)
+    }
+
     app.lenis.scrollTo(attr(ev.currentTarget, 'href'), {
       duration: 1,
       easing: expoInOut,
@@ -44,7 +47,7 @@ export default component((node, ctx) => {
   })
 
   function getOffset() {
-    return -(137 / 1536) * ctx.getState().ww
+    return ctx.getState().ww < 768 ? -100 : -137
   }
 
   if (window.location.hash) {

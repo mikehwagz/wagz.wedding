@@ -46,6 +46,9 @@
     --scroll-padding-top: calc(var(--header-height) + 7.5rem);
     --logo-padding: 2.5rem;
 
+    --_svh: 100svh;
+    --svh: var(--_svh, 100vh);
+
     @screen l {
       --header-height: 7.2rem;
       --frame-border-radius: 4rem;
@@ -55,7 +58,7 @@
   }
 
   body {
-    @apply text-18 l:text-20 leading-150 -tracking-1 font-gooper bg-tan overflow-hidden;
+    @apply text-18 l:text-20 leading-140 s:leading-150 -tracking-1 font-gooper bg-tan overflow-hidden;
   }
 
   a,
@@ -77,6 +80,14 @@
 }
 
 @layer components {
+  .h2 {
+    @apply text-40 m:text-50 text-center leading-150 font-candy;
+  }
+
+  .h3 {
+    @apply text-23 s:text-25 l:text-33 leading-125;
+  }
+
   .notched {
     clip-path: polygon(
       0% var(--notch-size),
@@ -130,7 +141,7 @@
         background-color: theme('colors.blue-secondary');
       }
 
-      padding: 1.5rem 5rem 1.5rem 1rem;
+      padding: 1.8rem 5rem 1.8rem 1rem;
       font-size: 1.8rem;
 
       @screen m {

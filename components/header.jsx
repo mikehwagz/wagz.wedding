@@ -4,7 +4,7 @@ export function Header(props) {
   return (
     <header class="fixed z-8 top-0 inset-x-0 h-[var(--header-height)] px-[var(--frame-padding)] -mx-5">
       <nav class="relative w-full h-full" data-component="nav">
-        <button class="block m:hidden absolute top-1/2 -translate-y-1/2 left-0 p-5 z-2 js-menuToggle">
+        <button class="block m:hidden absolute top-1/2 -translate-y-1/2 left-0 p-5 z-2 outline-none focus-visible:ring-1 focus-visible:ring-black rounded-7 js-menuToggle">
           <div class="js-menuText">Menu</div>
           <div class="absolute -translate-y-full invisible js-closeText">Close</div>
         </button>
@@ -71,7 +71,7 @@ export function Header(props) {
             class="p-5 will-change-transform outline-none focus-visible:[-webkit-text-stroke-width:0.1rem] js-menuLinks"
             href="#faq"
           >
-            FAQ
+            Faq
           </a>
           <a
             class="p-5 will-change-transform outline-none focus-visible:[-webkit-text-stroke-width:0.1rem] js-menuLinks"
@@ -83,7 +83,7 @@ export function Header(props) {
             class="p-5 will-change-transform outline-none focus-visible:[-webkit-text-stroke-width:0.1rem] js-menuLinks"
             href="#rsvp"
           >
-            RSVP
+            Rsvp
           </a>
         </div>
       </nav>
