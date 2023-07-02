@@ -205,7 +205,7 @@ function App() {
                 change your response, please{' '}
                 <a
                   className="border-b-1 border-dashed hover:border-solid"
-                  href={`mailto:concierge@wagz.wedding?subject=RSVP%20Change%20Request%20for%20${person.name}`}
+                  href={`mailto:jennifermheintz@gmail.com?subject=RSVP%20Change%20Request%20for%20${person.name}`}
                 >
                   send us an email
                 </a>

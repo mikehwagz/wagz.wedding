@@ -132,7 +132,7 @@ export async function handler() {
           <div class="col-start-1 m:col-start-2 col-end-13 600:col-end-10 m:col-end-8 l:col-end-6 relative mb-60 600:mb-100">
             <div class="hidden 600:block h3 absolute right-full mr-15 m:mr-25">♥</div>
             <h3 class="h3 mb-15 m:mb-20">Welcome to the Arboretum</h3>
-            <p class="text-16 m:text-20 leading-125 italic mb-15">5:00 pm – 5:30 pm</p>
+            <p class="text-16 m:text-20 leading-125 italic mb-15">Arrive by 5:30 pm</p>
             <p>
               Entry to Morris Arboretum begins at 5 pm. Free parking is available on site. There
               will also be two shuttle busses from the hotel. We’ll have the whole park to ourselves
@@ -165,7 +165,7 @@ export async function handler() {
             <div class="hidden 600:block h3 absolute right-full mr-15 m:mr-25">♥</div>
             <h3 class="h3 mb-15 m:mb-20">The Ceremony</h3>
             <p class="text-16 m:text-20 leading-125 italic mb-15">
-              5:45 pm – 6:30 pm<span class="hidden xl:inline"> · </span>
+              6:00 pm – 6:30 pm<span class="hidden xl:inline"> · </span>
               <br class="xl:hidden" />
               Baxter Memorial
             </p>
@@ -226,7 +226,7 @@ export async function handler() {
             <div class="hidden 600:block h3 absolute right-full mr-15 m:mr-25">♥</div>
             <h3 class="h3 mb-15 m:mb-20">After Party</h3>
             <p class="text-16 m:text-20 leading-125 italic mb-15">
-              11:00 pm – 1:00 am<span class="hidden xl:inline"> · </span>
+              11:00 pm – Late<span class="hidden xl:inline"> · </span>
               <br class="xl:hidden" />
               Manayunk Brewing
             </p>
@@ -331,10 +331,7 @@ export async function handler() {
             </h3>
           </button>
           <div data-sqzbx-panel>
-            <p>
-              Our wedding is Semi-Formal/Black Tie Optional. There’s no need to dress super fancy,
-              but dress to impress if your heart desires!
-            </p>
+            <p>Our wedding is Cocktail/Black Tie Optional.</p>
           </div>
           <button data-sqzbx-button>
             <h3>
@@ -347,6 +344,19 @@ export async function handler() {
               Yes! There is plenty of free parking available at the venue. Please refrain from
               driving if you plan to consume alcoholic beverages. There are plenty of Ubers
               available in the area.
+            </p>
+          </div>
+          <button data-sqzbx-button>
+            <h3>
+              <div class="hidden m:inline-block w-58 mr-40 flex-shrink-0">♥</div>Can I Uber there?
+            </h3>
+          </button>
+          <div data-sqzbx-panel>
+            <p>
+              Yes, there are plenty of rideshare options available. Please make sure you use the
+              address 100 E. Northwestern Avenue, or you will be dropped off at the wrong side of
+              the property. If you are taking an Uber home, please try and call for your ride 30
+              minutes before the end of the party.
             </p>
           </div>
           <button data-sqzbx-button>
@@ -386,6 +396,20 @@ export async function handler() {
               Yes! A big reason we chose Morris Arboretum was because of it’s accessibility.
               Additionally, golf carts will be available to transport guests with mobility
               restrictions to the ceremony location. Please note that the ceremony will be on grass.
+            </p>
+          </div>
+          <button data-sqzbx-button>
+            <h3>
+              <div class="hidden m:inline-block w-58 mr-40 flex-shrink-0">♥</div>What’s the deal
+              with the After Party?
+            </h3>
+          </button>
+          <div data-sqzbx-panel>
+            <p>
+              This is totally optional for guests who want to hang out a little later. Our plan is
+              to take over Manayunk Brewing Co, or whatever bar on Main St. that will take us in!
+              Please note that there will not be a shuttle back, so be prepared to ride share back
+              to your accommodation. The Residence Inn is also an easy 15 minute walk.
             </p>
           </div>
           <button data-sqzbx-button>
