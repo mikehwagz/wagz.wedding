@@ -289,7 +289,7 @@ export async function handler() {
                 Bar, Martha, Two Robbers, Bok Bar
               </p>
               <a
-                href="#"
+                href="https://www.google.com/maps/d/u/0/edit?mid=15EMT1iZQmGnCdrDF7Fc7z42zNnOhaVQ&usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 data-component="link"
@@ -306,7 +306,7 @@ export async function handler() {
                 Comedy Club, The Barnes Foundation, Wissahickon, Eastern State Penitentiary
               </p>
               <a
-                href="#"
+                href="https://www.google.com/maps/d/u/0/edit?mid=15EMT1iZQmGnCdrDF7Fc7z42zNnOhaVQ&usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 data-component="link"
