@@ -1,11 +1,3 @@
 [build]
-command = "yarn build"
-publish = "dist/"
-
-[dev]
-framework = "#custom"
-command = "yarn serve"
-port = 3_000
-targetPort = 8_080
-publish = "dist/"
-autoLaunch = true
+  publish = 'site/build/static'
+  functions = 'site/build/functions'
