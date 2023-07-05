@@ -63,10 +63,10 @@ export async function handler() {
         <div class="px-25 s:px-50">
           <div class="story mx-auto text-[clamp(18px,calc(45/1536*100vw),45px)] leading-140 s:leading-135 space-y-20 s:space-y-30">
             <p class="indent-[10%]">
-              Jenny and Mike met in a design course in 2015 while attending college in Boston.
-              During a studio snack break, Mike was eating an avocado with a spoon (it was a weird
-              phase) and staring at Jen. Later that night she told her roommates about the
-              mustachioed man who was making eyes at her. She was intrigued.
+              Jennifer Heintz and Mike Wagenheim met in a design course in 2015 while attending
+              college in Boston. During a studio snack break, Mike was eating an avocado with a
+              spoon (it was a weird phase) and staring at Jen. Later that night she told her
+              roommates about the mustachioed man who was making eyes at her. She was intrigued.
             </p>
             <p>
               The following week, Mike approached Jen in line at the Subway™ on campus. Mike was
