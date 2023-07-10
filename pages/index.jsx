@@ -455,7 +455,7 @@ export async function handler() {
           we’re registered at Zola.
         </p>
         <a
-          href="#"
+          href="https://www.zola.com/registry/heintzwagzwedding"
           target="_blank"
           rel="noopener noreferrer"
           data-component="link"
