@@ -272,7 +272,7 @@ export async function handler() {
                 Inn in Bala Cynwyd to the event and back.
               </p>
               <a
-                href="https://www.marriott.com/events/start.mi?id=1659021055198&key=GRP"
+                href="https://www.marriott.com/en-us/hotels/phlrb-residence-inn-philadelphia-bala-cynwyd/overview/"
                 target="_blank"
                 rel="noopener noreferrer"
                 data-component="link"
