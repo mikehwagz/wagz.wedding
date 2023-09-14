@@ -452,11 +452,11 @@ function NameAutocomplete(props) {
             }),
           })}
         >
-          <p class="leading-140 mb-10">
+          <p className="leading-140 mb-10">
             Start typing your name and then select it from the list below. If you have any issues
             finding your name,{' '}
             <a
-              class="underline hover:no-underline"
+              className="underline hover:no-underline"
               href="mailto:jennifermheintz@gmail.com?subject=RSVP%20Issue"
             >
               email us

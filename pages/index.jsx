@@ -232,8 +232,9 @@ export async function handler() {
             </p>
             <p>
               After the reception, we'll be heading back toward the hotel to Manayunk Brewing Co for
-              a low-key, nothing fancy after party. There will be a shuttle available from the
-              reception to the brewery, on the main street of Manayunk. Let's keep the party going!
+              a low-key, nothing fancy after party featuring a cash bar. There will be a shuttle
+              available from the reception to the brewery on the main street of Manayunk. Let's keep
+              the party going!
             </p>
           </div>
         </div>
@@ -367,10 +368,10 @@ export async function handler() {
           </button>
           <div data-sqzbx-panel>
             <p>
-              We will have two shuttles with limited seating available to and from our hotel, the
-              Marriott Residence Inn in Bala Cynwyd, to the event at Morris Arboretum. If seating
-              runs out, please let our older guests ride in the shuttle and opt to take an Uber
-              instead :-)
+              We will have two shuttles available to and from our hotel, the Marriott Residence Inn
+              in Bala Cynwyd, to the event at Morris Arboretum. Please wait outside The Lark
+              restaurant entrance of the hotel at 4:45 to catch the bus. The shuttles will leave
+              promptly at 5:00 pm.
             </p>
           </div>
           <button data-sqzbx-button>
@@ -406,10 +407,11 @@ export async function handler() {
           </button>
           <div data-sqzbx-panel>
             <p>
-              This is totally optional for guests who want to hang out a little later. Our plan is
-              to take over Manayunk Brewing Co, or whatever bar on Main St. that will take us in!
-              Please note that there will not be a shuttle back, so be prepared to ride share back
-              to your accommodation. The Residence Inn is also an easy 15 minute walk.
+              This is totally optional for guests who want to keep the party going. Our plan is to
+              take over Manayunk Brewing Co, or whatever bar on Main St. in Manayunk that will take
+              us in! Please note that this will be cash bar and there will not be a shuttle back to
+              the hotel, so be prepared to ride share back to your accommodation. The Residence Inn
+              is also an easy 15 minute walk.
             </p>
           </div>
           <button data-sqzbx-button>
@@ -470,7 +472,20 @@ export async function handler() {
       <section class="px-10 m:px-50 mb-100 m:mb-180" id="rsvp">
         <div class="bg-tan max-w-[94.5rem] mx-auto rounded-7 [box-shadow:_0.7rem_0.7rem_0.9rem_theme('colors.blue-secondary')] px-20 m:px-50 py-60 m:min-h-[68.5rem] flex flex-col">
           <h2 class="h2 mb-20">Rsvp</h2>
-          <div class="flex-grow" data-component="form"></div>
+          <div class="flex-grow flex items-center">
+            <p class="text-16 m:text-20 text-center max-w-[45rem] mx-auto pb-100">
+              The RSVP window is over. We can't wait to celebrate with you! If you have any
+              questions or concerns, please{' '}
+              <a
+                class="border-b-1 border-dashed hover:border-solid"
+                href="mailto:jennifermheintz@gmail.com"
+              >
+                email us
+              </a>
+              .
+            </p>
+          </div>
+          {/* <div class="flex-grow" data-component="form"></div> */}
         </div>
       </section>
       <footer class="text-center pb-30 l:pb-30">

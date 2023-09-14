@@ -10,6 +10,7 @@ import accordion from './components/accordion'
 import schedule from './components/schedule'
 import form from './components/form.jsx'
 import nav from './components/nav'
+import countdown from './components/countdown'
 
 const components = {
   'grid-overlay': gridOverlay,
@@ -21,6 +22,7 @@ const components = {
   accordion,
   schedule,
   img,
+  countdown,
 }
 
 const state = {

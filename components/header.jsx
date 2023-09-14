@@ -3,7 +3,14 @@ import { h } from 'hyposcript'
 export function Header(props) {
   return (
     <header class="fixed z-8 top-0 inset-x-0 h-[var(--header-height)] px-[var(--frame-padding)] -mx-5">
-      <nav class="relative w-full h-full" data-component="nav">
+      <div
+        class="bg-blue-secondary text-black h-[var(--countdown-height)] -mx-[var(--frame-padding)] text-center border-b-1 text-13 s:text-16 m:text-20 flex items-center justify-center"
+        data-component="countdown"
+      ></div>
+      <nav
+        class="relative w-full h-[calc(var(--header-height)-var(--countdown-height))]"
+        data-component="nav"
+      >
         <button class="block m:hidden absolute top-1/2 -translate-y-1/2 left-0 p-5 z-2 outline-none focus-visible:ring-1 focus-visible:ring-black rounded-7 js-menuToggle">
           <div class="js-menuText">Menu</div>
           <div class="absolute -translate-y-full invisible js-closeText">Close</div>
