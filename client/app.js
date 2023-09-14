@@ -1,21 +1,21 @@
 import { picoapp } from 'picoapp'
 import { size, qs } from 'martha'
 
-import gridOverlay from './components/grid-overlay'
+// import gridOverlay from './components/grid-overlay'
 import img from './components/img'
 import link from './components/link'
 import marquee from './components/marquee'
 import parallax from './components/parallax'
 import accordion from './components/accordion'
 import schedule from './components/schedule'
-import form from './components/form.jsx'
+// import form from './components/form.jsx'
 import nav from './components/nav'
 import countdown from './components/countdown'
 
 const components = {
-  'grid-overlay': gridOverlay,
+  // 'grid-overlay': gridOverlay,
   nav,
-  form,
+  // form,
   link,
   marquee,
   parallax,
