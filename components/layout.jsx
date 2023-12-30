@@ -57,6 +57,16 @@ export function Layout({ children }) {
         <link rel="stylesheet" href={`/${manifest['main.css']}`} />
         {/* <script src="https://unpkg.com/@sanity/client"></script> */}
         <script src={`/${manifest['main.js']}`} defer></script>
+
+        {/* Google tag (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-V3Y1WMVZWX"></script>
+        <script>{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-V3Y1WMVZWX');
+        `}</script>
       </head>
       <body>
         <div id="root">
